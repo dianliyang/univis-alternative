@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE UnivIS SYSTEM "http://univis.uni-kiel.de/univis.dtd">
+<UnivIS version="1.6" semester="2025w" organisation="CAU Kiel">
+<Event key="Event.current.techn.infor.inform.softwa.infess">
+<contact><UnivISRef type="Person" key="Person.techn.infor.inform.softwa.schnoo_5" /></contact>
+<dbref><UnivISRef type="Lecture" key="Lecture.techn.infor.inform.softwa.infess" /></dbref>
+<id>99509724</id>
+<title>Exam event</title>
+</Event>
+<Lecture key="Lecture.techn.infor.inform.softwa.infess">
+<classification><UnivISRef type="Title" key="Title.techn.infora.master.theore" /></classification>
+<dozs>
+<doz><UnivISRef type="Person" key="Person.techn.infor.inform.softwa.schnoo_5" /></doz>
+</dozs>
+<ects>ja</ects>
+<ects_cred>6</ects_cred>
+<englisch>ja</englisch>
+<id>41780504</id>
+<name>infESSS-02a: Engineering Secure Software Systems</name>
+<number>080022</number>
+<orgname>Software Engineering</orgname>
+<orgunits>
+<orgunit>Technische Fakult&#xE4;t</orgunit>
+<orgunit>Institut f&#xFC;r Informatik</orgunit>
+<orgunit>Arbeitsgruppen</orgunit>
+<orgunit>Software Engineering</orgunit>
+</orgunits>
+<short>infESSS-02a</short>
+<sws>3</sws>
+<terms>
+<term>
+<endtime>15:45</endtime>
+<repeat>w1 1</repeat>
+<room><UnivISRef type="Room" key="Room.zentra_1.servic.ressou.gebude.dezern_1.refera.ame" /></room>
+<starttime>14:15</starttime>
+</term>
+</terms>
+</Lecture>
+<Lecture key="Lecture.rechts.instit.example">
+<id>123456</id>
+<name>German Public Law</name>
+<orgunits>
+<orgunit>Rechtswissenschaftliche Fakult&#xE4;t</orgunit>
+</orgunits>
+</Lecture>
+</UnivIS>

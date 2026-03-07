@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "univis-alternative",
+  "main": "cloudflare/worker.ts",
+  "compatibility_date": "2026-03-07",
+  "assets": {
+    "directory": "site/.vitepress/dist",
+    "binding": "ASSETS"
+  },
+  "r2_buckets": [
+    {
+      "binding": "DATA_BUCKET",
+      "bucket_name": "univis-alternative-data"
+    }
+  ],
+  "vars": {
+    "DATA_PREFIX": "latest"
+  },
+  "triggers": {
+    "crons": ["0 3 * * *"]
+  }
+}

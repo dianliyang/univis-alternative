@@ -86,7 +86,7 @@ function filteredHref(faculty: string, language?: string): string {
   if (language) {
     params.set("language", language);
   }
-  return `/courses/catalog/?${params.toString()}`;
+  return `/courses/catalog?${params.toString()}`;
 }
 </script>
 

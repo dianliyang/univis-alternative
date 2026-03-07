@@ -8,5 +8,5 @@ Static browser for public UnivIS course data from Kiel.
 - Semester scope is limited to the recent window from `SS 2024` through `SS 2026`
 
 [Browse the catalog](/courses/)
-[English-taught courses](/courses/catalog/?language=english)
-[German-taught courses](/courses/catalog/?language=german)
+[English-taught courses](/courses/catalog?language=english)
+[German-taught courses](/courses/catalog?language=german)

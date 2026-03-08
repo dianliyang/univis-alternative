@@ -1,10 +1,10 @@
-export function getRecentSemesterCodes(referenceDate = new Date()): string[] {
+export function getRecentSemesterCodes(referenceDate = new Date(), count = 1): string[] {
   const year = referenceDate.getUTCFullYear();
   const month = referenceDate.getUTCMonth() + 1;
   const current = month >= 4 && month <= 9 ? `${year}s` : month >= 10 ? `${year}w` : `${year}s`;
   const semesters = [current];
 
-  while (semesters.length < 5) {
+  while (semesters.length < count) {
     const previous = previousSemesterCode(semesters[semesters.length - 1]!);
     semesters.push(previous);
   }

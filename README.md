@@ -1,13 +1,25 @@
-# UnivIS Kiel Static Catalog
+# UnivIS - CAU
 
-Static, read-only course browser for `https://univis.uni-kiel.de`.
+A simpler public browser for CAU Kiel lecture data from `https://univis.uni-kiel.de`.
 
-## Goals
+The site keeps the public UnivIS structure, but makes it easier to browse through:
 
-- Crawl allowed public UnivIS pages under `/form`
-- Never touch `/prg`
-- Build normalized course data and a VitePress catalog
-- Make English-taught courses easy to find
+- institutions
+- lecture-directory categories
+- generated lecture detail pages
+
+## What It Does
+
+- crawls allowed public UnivIS pages under `/form`
+- builds normalized lecture and organization data
+- generates a static VitePress site
+- publishes browser data for institutions and lectures
+- links back to the original UnivIS pages where needed
+
+## Browsing Modes
+
+- `Institutions`: browse from faculties, institutes, centers, and other units
+- `Lectures`: browse from lecture-directory categories such as degree programs and catalog sections
 
 ## Commands
 
@@ -16,24 +28,28 @@ Static, read-only course browser for `https://univis.uni-kiel.de`.
 - `npm run parse`
 - `npm run normalize`
 - `npm run generate`
+- `npm run build:data`
+- `npm run build:site`
 - `npm run build`
+- `npm run dev`
 
 ## Cloudflare
 
-The repo now includes a Cloudflare Worker entrypoint at [`cloudflare/worker.ts`](./cloudflare/worker.ts) and [`wrangler.jsonc`](./wrangler.jsonc).
+The repo includes a Cloudflare Worker entrypoint at [cloudflare/worker.ts](./cloudflare/worker.ts) and configuration in [wrangler.jsonc](./wrangler.jsonc).
 
-- Static site assets are served from `site/.vitepress/dist`
-- Published JSON data is read from R2 under `latest/`
-- The UI prefers `/api/data/*.json` and falls back to local `/data/*.json` for local development
-- A daily cron trigger is configured; by default it calls `SYNC_WEBHOOK_URL` if you set one
+- static site assets are served from `site/.vitepress/dist`
+- published JSON data is read from R2 under `latest/`
+- the UI prefers `/api/data/*.json` and falls back to local `/data/*.json` for development
 
 Typical deployment flow:
 
 1. `npm run build:data`
 2. `npm run build:site`
 3. `wrangler deploy`
-4. Upload `site/public/data/*.json` to the R2 bucket path `latest/`
+4. upload published JSON artifacts to the R2 bucket under `latest/`
 
-The current Worker deployment path is ready for Cloudflare-hosted serving. The full UnivIS retrieval pipeline itself is still Node-based and should be run by a separate scheduled job/webhook target until it is ported to Cloudflare-native runtime.
+Exact deployment commands are documented in [cloudflare/DEPLOY.md](./cloudflare/DEPLOY.md).
 
-Exact Cloudflare commands are documented in [cloudflare/DEPLOY.md](./cloudflare/DEPLOY.md).
+## License
+
+MIT. See [LICENSE](./LICENSE).

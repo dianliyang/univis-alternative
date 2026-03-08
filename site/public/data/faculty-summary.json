@@ -1,0 +1,92 @@
+[
+  {
+    "faculty": "_ringv",
+    "facultyCode": "_ringv",
+    "totalCount": 40,
+    "englishCount": 0,
+    "germanCount": 2,
+    "bilingualCount": 0,
+    "unknownCount": 38,
+    "highConfidenceCount": 0
+  },
+  {
+    "faculty": "Business, Economics and Social Sciences",
+    "facultyCode": "wirtsc",
+    "totalCount": 342,
+    "englishCount": 2,
+    "germanCount": 8,
+    "bilingualCount": 2,
+    "unknownCount": 330,
+    "highConfidenceCount": 10
+  },
+  {
+    "faculty": "Central Facilities",
+    "facultyCode": "zentra",
+    "totalCount": 34,
+    "englishCount": 0,
+    "germanCount": 2,
+    "bilingualCount": 0,
+    "unknownCount": 32,
+    "highConfidenceCount": 0
+  },
+  {
+    "faculty": "Humanities",
+    "facultyCode": "philos",
+    "totalCount": 2520,
+    "englishCount": 28,
+    "germanCount": 208,
+    "bilingualCount": 1,
+    "unknownCount": 2283,
+    "highConfidenceCount": 70
+  },
+  {
+    "faculty": "Law",
+    "facultyCode": "rechts",
+    "totalCount": 148,
+    "englishCount": 15,
+    "germanCount": 5,
+    "bilingualCount": 0,
+    "unknownCount": 128,
+    "highConfidenceCount": 8
+  },
+  {
+    "faculty": "Mathematics and Natural Sciences",
+    "facultyCode": "mathe",
+    "totalCount": 1221,
+    "englishCount": 4,
+    "germanCount": 3,
+    "bilingualCount": 0,
+    "unknownCount": 1214,
+    "highConfidenceCount": 6
+  },
+  {
+    "faculty": "Medicine",
+    "facultyCode": "medizi",
+    "totalCount": 360,
+    "englishCount": 16,
+    "germanCount": 3,
+    "bilingualCount": 0,
+    "unknownCount": 341,
+    "highConfidenceCount": 18
+  },
+  {
+    "faculty": "Profiles and Interdisciplinary",
+    "facultyCode": "profil",
+    "totalCount": 18,
+    "englishCount": 0,
+    "germanCount": 0,
+    "bilingualCount": 0,
+    "unknownCount": 18,
+    "highConfidenceCount": 0
+  },
+  {
+    "faculty": "Theology",
+    "facultyCode": "theol",
+    "totalCount": 156,
+    "englishCount": 0,
+    "germanCount": 4,
+    "bilingualCount": 0,
+    "unknownCount": 152,
+    "highConfidenceCount": 0
+  }
+]

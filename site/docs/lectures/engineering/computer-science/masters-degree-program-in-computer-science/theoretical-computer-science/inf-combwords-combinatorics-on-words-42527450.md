@@ -1,0 +1,11 @@
+---
+title: "Combinatorics on Words"
+pageClass: lecture-node-page
+---
+
+# Combinatorics on Words
+
+- Lecture ID: 42527450
+- Source: [UnivIS](https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Flecture_view&lvs=techn%2Finfor%2Finform%2Fzuverl%2F_infco&anonymous=1&lang=en&sem=2025w&ref=main&__e=519)
+
+Detailed local course content is not available in the current catalog build for this lecture yet.

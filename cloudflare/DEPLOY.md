@@ -22,7 +22,7 @@ npm run cf:build
 This produces:
 
 - static assets in `site/.vitepress/dist`
-- published JSON data in `site/public/data`
+- published JSON data in `site/docs/public/data`
 
 ## Publish Data To R2
 

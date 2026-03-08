@@ -1,0 +1,1927 @@
+{
+  "semester": "2026s",
+  "faculties": [
+    {
+      "faculty": "_ringv",
+      "facultyCode": "_ringv",
+      "totalCount": 40,
+      "englishCount": 0,
+      "germanCount": 2,
+      "bilingualCount": 0,
+      "unknownCount": 38,
+      "highConfidenceCount": 0,
+      "label": "Ringvorlesungen",
+      "path": "_ringv",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=_ringv&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=_ringv&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+      "children": []
+    },
+    {
+      "faculty": "Business, Economics and Social Sciences",
+      "facultyCode": "wirtsc",
+      "totalCount": 342,
+      "englishCount": 2,
+      "germanCount": 8,
+      "bilingualCount": 2,
+      "unknownCount": 330,
+      "highConfidenceCount": 10,
+      "label": "Wirtschafts- und Sozialwissenschaftliche Fakult�t",
+      "path": "wirtsc",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture:tree&anonymous=1&ref=tlecture&sem=2026s&tdir=wirtsc&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&anonymous=1&ref=tlecture&sem=2026s&tdir=wirtsc&__e=519",
+      "children": [
+        {
+          "label": "Bachelor-Studieng�nge",
+          "path": "wirtsc/bachel",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Bachelor BWL",
+              "path": "wirtsc/bachel/bachel",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/bachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fbachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor Politikwissenschaft",
+              "path": "wirtsc/bachel/politi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/politi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fpoliti&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor Sozio-�konomik",
+              "path": "wirtsc/bachel/bachel_3",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/bachel_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fbachel_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor Soziologie",
+              "path": "wirtsc/bachel/soziol",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/soziol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fsoziol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor Volkswirtschaftslehre (VWL)",
+              "path": "wirtsc/bachel/bachel_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/bachel_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fbachel_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor Wirtschaft/Politik",
+              "path": "wirtsc/bachel/wirtsc",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/wirtsc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fwirtsc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor Wiwi mit Profil Wirtschaftsp�dagogik",
+              "path": "wirtsc/bachel/bachel_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/bachel_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fbachel_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Studienkolleg (Angebote f�r W-Ing Mawi, W-Ing ET&IT, W-Chem, W-Inf, Inf AF BWL)",
+              "path": "wirtsc/bachel/studie",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/bachel/studie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fbachel%2Fstudie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Doktorandenstudium",
+          "path": "wirtsc/doktor",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/doktor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fdoktor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Doctoral Programme 'Quantitative Economics'",
+              "path": "wirtsc/doktor/doctor",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/doktor/doctor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fdoktor%2Fdoctor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Graduiertenkolleg",
+              "path": "wirtsc/doktor/_12gra",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/doktor/_12gra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fdoktor%2F_12gra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Extracurriculare Angebote",
+          "path": "wirtsc/extrac",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/extrac&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fextrac&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Master-Studieng�nge",
+          "path": "wirtsc/master",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Masterstudiengang BWL",
+              "path": "wirtsc/master/master",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/master/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fmaster%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Masterstudieng�nge Econ/ ERE/ QF/ QE",
+              "path": "wirtsc/master/master_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/master/master_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fmaster%2Fmaster_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Soziologie",
+              "path": "wirtsc/master/soziol",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/master/soziol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fmaster%2Fsoziol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Wirtschaft/Politik",
+              "path": "wirtsc/master/wirtsc",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=wirtsc/master/wirtsc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=wirtsc%2Fmaster%2Fwirtsc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty": "Central Facilities",
+      "facultyCode": "zentra",
+      "totalCount": 34,
+      "englishCount": 0,
+      "germanCount": 2,
+      "bilingualCount": 0,
+      "unknownCount": 32,
+      "highConfidenceCount": 0,
+      "label": "Sprachkurse Deutsch als Fremdsprache",
+      "path": "zentra",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=zentra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=zentra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+      "children": [
+        {
+          "label": "Englischkurse",
+          "path": "zentra/englis",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=zentra/englis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=zentra%2Fenglis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Sonderkurse",
+          "path": "zentra/_sonde",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=zentra/_sonde&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=zentra%2F_sonde&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Studienbegleitende Deutschkurse",
+          "path": "zentra/_studi_1",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=zentra/_studi_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=zentra%2F_studi_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Studienvorbereitende Deutschkurse",
+          "path": "zentra/_studi",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=zentra/_studi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=zentra%2F_studi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        }
+      ]
+    },
+    {
+      "faculty": "Humanities",
+      "facultyCode": "philos",
+      "totalCount": 2520,
+      "englishCount": 28,
+      "germanCount": 208,
+      "bilingualCount": 1,
+      "unknownCount": 2283,
+      "highConfidenceCount": 70,
+      "label": "Philosophische Fakult�t",
+      "path": "philos",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture:tree&anonymous=1&ref=tlecture&sem=2026s&tdir=philos&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&anonymous=1&ref=tlecture&sem=2026s&tdir=philos&__e=519",
+      "children": [
+        {
+          "label": "Fachwissenschaftliches Lehrangebot",
+          "path": "philos/fachwi",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Deutsch",
+              "path": "philos/fachwi/_deuts",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_deuts&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_deuts&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Deutsch als Zweitsprache/Deutsch als Fremdsprache und Mehrsprachigkeit (Erg�nzungsfach)",
+              "path": "philos/fachwi/deutsc",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/deutsc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fdeutsc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Empirische Sprachwissenschaft",
+              "path": "philos/fachwi/semina",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/semina&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fsemina&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Englisch",
+              "path": "philos/fachwi/englis",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/englis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fenglis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Europ�ische Ethnologie/Volkskunde",
+              "path": "philos/fachwi/semina_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/semina_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fsemina_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Friesische Philologie",
+              "path": "philos/fachwi/friesi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/friesi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Ffriesi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Geographie (Magister - Br�ckenfach, auslaufend)",
+              "path": "philos/fachwi/_geogr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_geogr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_geogr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Geschichte",
+              "path": "philos/fachwi/histor",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/histor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fhistor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Griechisch / Latein / Mittel- und Neulatein",
+              "path": "philos/fachwi/instit",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/instit&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Finstit&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Heilp�dagogik (Lehramt Sonderschule [Hauptstudium], Diplom-P�dagogik)",
+              "path": "philos/fachwi/lehran",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/lehran&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Flehran&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Indologie (Magister auslaufend)",
+              "path": "philos/fachwi/indolo",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/indolo&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Findolo&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Interkulturelle Studien: Polen und Deutsche in Europa",
+              "path": "philos/fachwi/interk",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/interk&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Finterk&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Interkulturelle Studien: Russland und Deutschland transregional",
+              "path": "philos/fachwi/interk_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/interk_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Finterk_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Internationale Politik und Internationales Recht (f�r neuimmatrikulierte Studierende ab WS 17/18)",
+              "path": "philos/fachwi/intern_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/intern_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fintern_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Islamwissenschaft",
+              "path": "philos/fachwi/semina_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/semina_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fsemina_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Klassische Arch�ologie",
+              "path": "philos/fachwi/archol",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/archol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Farchol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Kunstgeschichte / Kunst",
+              "path": "philos/fachwi/kunsth",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/kunsth&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fkunsth&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Medienwissenschaft",
+              "path": "philos/fachwi/medien",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/medien&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fmedien&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Migration und Diversit�t",
+              "path": "philos/fachwi/migrat",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/migrat&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fmigrat&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Musikwissenschaft",
+              "path": "philos/fachwi/musikw",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/musikw&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fmusikw&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Niederdeutsch (Erg�nzungsfach)",
+              "path": "philos/fachwi/nieder",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/nieder&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fnieder&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Philosophie",
+              "path": "philos/fachwi/philos",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/philos&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fphilos&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Phonetik und digitale Sprachverarbeitung (Magister auslaufend)",
+              "path": "philos/fachwi/instit_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/instit_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Finstit_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Psychologie",
+              "path": "philos/fachwi/instit_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/instit_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Finstit_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "P�dagogik",
+              "path": "philos/fachwi/_pdago",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_pdago&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_pdago&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Romanische Philologie",
+              "path": "philos/fachwi/romani",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/romani&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fromani&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Skandinavistik",
+              "path": "philos/fachwi/nordis",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/nordis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fnordis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Slavische Philologie",
+              "path": "philos/fachwi/slavis",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/slavis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2Fslavis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Sozialwissenschaften (Politikwissenschaft, Soziologie)",
+              "path": "philos/fachwi/_sozio",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_sozio&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_sozio&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Sportwissenschaft",
+              "path": "philos/fachwi/_sport",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_sport&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_sport&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Sprach- und Lekt�rekurse (auch f�r H�rerinnen und H�rer aller Fakult�ten)",
+              "path": "philos/fachwi/_sprac",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_sprac&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_sprac&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Ur- und Fr�hgeschichte",
+              "path": "philos/fachwi/_urund",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_urund&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_urund&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Weitere Lehrangebote in der Philosophischen Fakult�t / Studienzertifikate",
+              "path": "philos/fachwi/_lehrv",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/fachwi/_lehrv&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Ffachwi%2F_lehrv&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Profilierungsbereich",
+          "path": "philos/profil_2",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/profil_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Fprofil_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Profil Facherg�nzung",
+              "path": "philos/profil_2/profil_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/profil_2/profil_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Fprofil_2%2Fprofil_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Profil Lehramt (jetzt an anderer Stelle im Vorlesungsverzeichnis)",
+              "path": "philos/profil_2/profil",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=philos/profil_2/profil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=philos%2Fprofil_2%2Fprofil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty": "Law",
+      "facultyCode": "rechts",
+      "totalCount": 148,
+      "englishCount": 15,
+      "germanCount": 5,
+      "bilingualCount": 0,
+      "unknownCount": 128,
+      "highConfidenceCount": 8,
+      "label": "Rechtswissenschaftliche Fakult�t",
+      "path": "rechts",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture:tree&anonymous=1&ref=tlecture&sem=2026s&tdir=rechts&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&anonymous=1&ref=tlecture&sem=2026s&tdir=rechts&__e=519",
+      "children": [
+        {
+          "label": "2. Semester",
+          "path": "rechts/_2priv",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_2priv&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_2priv&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Grundlagen",
+              "path": "rechts/_2priv/grundl",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_2priv/grundl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_2priv%2Fgrundl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Juristische Arbeitstechniken",
+              "path": "rechts/_2priv/jurist",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_2priv/jurist&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_2priv%2Fjurist&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Strafrecht",
+              "path": "rechts/_2priv/strafr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_2priv/strafr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_2priv%2Fstrafr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Zivilrecht",
+              "path": "rechts/_2priv/zivilr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_2priv/zivilr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_2priv%2Fzivilr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "�ffentliches Recht",
+              "path": "rechts/_2priv/ffentl",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_2priv/ffentl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_2priv%2Fffentl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "4. Semester",
+          "path": "rechts/_4ffen",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Juristische Arbeitstechniken",
+              "path": "rechts/_4ffen/jurist",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen/jurist&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen%2Fjurist&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Strafrecht",
+              "path": "rechts/_4ffen/strafr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen/strafr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen%2Fstrafr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Veranstaltungen zur Vermittlung von Fremdsprachenkompetenz",
+              "path": "rechts/_4ffen/verans",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen/verans&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen%2Fverans&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Veranstaltungen zur Vermittlung von Schl�sselqualifikationen",
+              "path": "rechts/_4ffen/verans_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen/verans_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen%2Fverans_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Zivilrecht",
+              "path": "rechts/_4ffen/zivilr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen/zivilr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen%2Fzivilr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "�ffentliches Recht",
+              "path": "rechts/_4ffen/ffentl",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_4ffen/ffentl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_4ffen%2Fffentl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "6. Semester",
+          "path": "rechts/_6arbe",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Schwerpunkt 1.1: Zivilrechtspflege mit Ausrichtung auf Familien- und Erbrecht",
+              "path": "rechts/_6arbe/schwer",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 1.2: Zivilrechtspflege mit Ausrichtung auf Zivilverfahrens- und Insolvenzrecht",
+              "path": "rechts/_6arbe/schwer_9",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_9&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_9&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 2: Kriminalwissenschaften",
+              "path": "rechts/_6arbe/schwer_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 3: Staat und Verwaltung",
+              "path": "rechts/_6arbe/schwer_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 4.1: Wirtschaftsrecht mit Ausrichtung auf Arbeitsrecht",
+              "path": "rechts/_6arbe/schwer_3",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 4.2: Wirtschaftsrecht mit Ausrichtung auf Steuerrecht",
+              "path": "rechts/_6arbe/schwer_4",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 4.3: Wirtschaftsrecht mit Ausrichtung auf Kartell- und Urheberrecht",
+              "path": "rechts/_6arbe/schwer_5",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_5&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_5&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 4.4: Wirtschaftsrecht mit Ausrichtung auf Bank- und Kapitalmarktrecht",
+              "path": "rechts/_6arbe/schwer_10",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_10&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_10&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 5: Internationales Privatrecht und Rechtsvergleichung",
+              "path": "rechts/_6arbe/schwer_6",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_6&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_6&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 6: V�lker- und Europarecht",
+              "path": "rechts/_6arbe/schwer_7",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_7&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_7&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 7: Historische und philosophische Grundlagen des Rechts",
+              "path": "rechts/_6arbe/schwer_8",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_8&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_8&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Schwerpunkt 8: Gesundheitsrecht",
+              "path": "rechts/_6arbe/schwer_11",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/schwer_11&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fschwer_11&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Zivilrecht",
+              "path": "rechts/_6arbe/zivilr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/zivilr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fzivilr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "�ffentliches Recht",
+              "path": "rechts/_6arbe/ffentl",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_6arbe/ffentl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_6arbe%2Fffentl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Englischsprachige Angebote",
+          "path": "rechts/englis",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/englis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Fenglis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Examensvorbereitung",
+          "path": "rechts/test",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Examens�bungsklausuren",
+              "path": "rechts/test/examen",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test/examen&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest%2Fexamen&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Intensivkurse",
+              "path": "rechts/test/intens",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test/intens&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest%2Fintens&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Probeexamen",
+              "path": "rechts/test/probee",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test/probee&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest%2Fprobee&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "WuV-Kurs Teil I (Ende November bis Ende Februar)",
+              "path": "rechts/test/wuvkur",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test/wuvkur&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest%2Fwuvkur&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "WuV-Kurs Teil II (Ende Februar bis Mitte Mai)",
+              "path": "rechts/test/wuvkur_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test/wuvkur_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest%2Fwuvkur_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "WuV-Kurs Teil III (Mitte Mai bis Ende Juli)",
+              "path": "rechts/test/wuvkur_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/test/wuvkur_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2Ftest%2Fwuvkur_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Semester�bergreifende Angebote",
+          "path": "rechts/_9semi",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_9semi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_9semi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Spezielle Angebote f�r Nebenfach- und LL.M.-Studierende",
+          "path": "rechts/_sonst",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_sonst&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_sonst&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Lehrangebot f�r Studierende der WiSo-Fakult�t",
+              "path": "rechts/_sonst/lehran",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_sonst/lehran&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_sonst%2Flehran&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Lehrangebot Profil Facherg�nzung Jura",
+              "path": "rechts/_sonst/lehran_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_sonst/lehran_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_sonst%2Flehran_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Spezielles Lehrangebot f�r LL.M.-Studierende",
+              "path": "rechts/_sonst/spezie",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=rechts/_sonst/spezie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=rechts%2F_sonst%2Fspezie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty": "Mathematics and Natural Sciences",
+      "facultyCode": "mathe",
+      "totalCount": 1221,
+      "englishCount": 4,
+      "germanCount": 3,
+      "bilingualCount": 0,
+      "unknownCount": 1214,
+      "highConfidenceCount": 6,
+      "label": "Mathematisch-Naturwissenschaftliche Fakult�t",
+      "path": "mathe",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture:tree&anonymous=1&ref=tlecture&sem=2026s&tdir=mathe&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&anonymous=1&ref=tlecture&sem=2026s&tdir=mathe&__e=519",
+      "children": [
+        {
+          "label": "Biochemie (versch. Studieng�nge)",
+          "path": "mathe/bioche",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/bioche&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbioche&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "BSc Biochemie und Molekularbiologie",
+              "path": "mathe/bioche/bachel",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/bioche/bachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbioche%2Fbachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Diplom Biochemie und Molekularbiologie (auslaufend)",
+              "path": "mathe/bioche/grunds",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/bioche/grunds&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbioche%2Fgrunds&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Forschungszentrum Borstel",
+              "path": "mathe/bioche/forsch",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/bioche/forsch&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbioche%2Fforsch&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Max-Planck-Institut f�r Evolutionsbiologie",
+              "path": "mathe/bioche/maxpla",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/bioche/maxpla&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbioche%2Fmaxpla&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "MSc Biochemie und Molekularbiologie",
+              "path": "mathe/bioche/master",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/bioche/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbioche%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Biological Oceanography (Master of Science)",
+          "path": "mathe/biolog_2",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Biologie (versch. Studieng�nge)",
+          "path": "mathe/biolog",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Bachelor of Arts/Science 2-Fach/Lehramt (StG. 300) 2. Semester",
+              "path": "mathe/biolog/bachel_5",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/bachel_5&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fbachel_5&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor of Arts/Science 2-Fach/Lehramt (StG. 300) 4. Semester",
+              "path": "mathe/biolog/bachel_8",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/bachel_8&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fbachel_8&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor of Arts/Science 2-Fach/Lehramt (StG. 300) 6. Semester",
+              "path": "mathe/biolog/bachel_9",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/bachel_9&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fbachel_9&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor of Science 1-Fach (StG. 100) 2. Semester",
+              "path": "mathe/biolog/bachel_4",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/bachel_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fbachel_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor of Science 1-Fach (StG. 100) 4. Semester",
+              "path": "mathe/biolog/bachel_6",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/bachel_6&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fbachel_6&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Bachelor of Science 1-Fach (StG. 100) 6. Semester",
+              "path": "mathe/biolog/bachel_7",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/bachel_7&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fbachel_7&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Master of Education 2-Fach/Lehramt (StG. 400) - Studiengang nach FPO-2025",
+              "path": "mathe/biolog/master_4",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/master_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fmaster_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Master of Science 1-Fach (StG. 200) - Studiengang nach FPO-2025",
+              "path": "mathe/biolog/master",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Master of Science Molecular Biology and Evolution 1-Fach (StG. 600)",
+              "path": "mathe/biolog/master_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/master_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fmaster_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Weitere Angebote",
+              "path": "mathe/biolog/weiter",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog/weiter&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog%2Fweiter&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Chemie als Nebenfach",
+          "path": "mathe/chemie_3",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Chemie und Wirtschaftschemie (versch. Studieng�nge)",
+          "path": "mathe/chemie",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "BSc Chemie",
+              "path": "mathe/chemie/organi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/organi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Forgani&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "BSc Wirtschaftschemie",
+              "path": "mathe/chemie/bscwir",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/bscwir&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Fbscwir&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "BSc/BA Chemie 2Fach",
+              "path": "mathe/chemie/physik",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/physik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Fphysik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Chemie Diplom",
+              "path": "mathe/chemie/chemie",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/chemie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Fchemie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Lehramt an Gymnasien",
+              "path": "mathe/chemie/lehram",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/lehram&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Flehram&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Lehramt an Realschulen",
+              "path": "mathe/chemie/lehram_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/lehram_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Flehram_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Master of Education Chemie (2-Fach)",
+              "path": "mathe/chemie/master",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "MSc Chemie",
+              "path": "mathe/chemie/mscche",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/mscche&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Fmscche&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Weiterbildung",
+              "path": "mathe/chemie/weiter",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/chemie/weiter&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fchemie%2Fweiter&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Climate Physics: Meteorology and Physical Oceanography (Master of Science)",
+          "path": "mathe/climat",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/climat&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fclimat&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Coastal Geosciences and Engineering (Master of Science)",
+          "path": "mathe/master",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Drug Research and Technology (Master of Science)",
+          "path": "mathe/pharma_3",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Exportmodule Physik/Physik als Nebenfach",
+          "path": "mathe/spezie",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/spezie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fspezie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Geographie (versch. Studieng�nge)",
+          "path": "mathe/geogra",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "1-Fach Bachelor Geographie",
+              "path": "mathe/geogra/vorles",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/vorles&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Fvorles&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "1-Fach Master Stadt- und Regionalentwicklung",
+              "path": "mathe/geogra/fachdi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/fachdi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Ffachdi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "1-Fach Master Sustainability, Society and the Environment",
+              "path": "mathe/geogra/1fachm",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/1fachm&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2F1fachm&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "1-Fach Master Umweltgeographie und -management",
+              "path": "mathe/geogra/fachdi_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/fachdi_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Ffachdi_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "2-F�cher Bachelor Geographie",
+              "path": "mathe/geogra/unters",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/unters&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Funters&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "2-F�cher Master Geographie",
+              "path": "mathe/geogra/mittel",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/mittel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Fmittel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Lehrangebot f�r Nebenfachstudierende",
+              "path": "mathe/geogra/gelnde",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/gelnde&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Fgelnde&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Orientierungs- und Weiterbildungsveranstaltungen",
+              "path": "mathe/geogra/orient",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/orient&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Forient&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Zertifikatsstudium GeoDataScience",
+              "path": "mathe/geogra/zertif_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/zertif_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Fzertif_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Zertifikatsstudium Stadtforschungen",
+              "path": "mathe/geogra/zertif",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geogra/zertif&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeogra%2Fzertif&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Geowissenschaften (versch. Studieng�nge)",
+          "path": "mathe/geowis",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geowis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeowis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Angewandte Geowissenschaften (Master of Science)",
+              "path": "mathe/geowis/angewa",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geowis/angewa&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeowis%2Fangewa&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Geophysics (Master of Science)",
+              "path": "mathe/geowis/geophy_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geowis/geophy_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeowis%2Fgeophy_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Geowissenschaften (Bachelor of Science)",
+              "path": "mathe/geowis/bachel",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geowis/bachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeowis%2Fbachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Marine Geoscience (Master of Science)",
+              "path": "mathe/geowis/marine",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geowis/marine&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeowis%2Fmarine&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Physik des Erdsystems: Meteorologie - Ozeanographie - Geophysik (Bachelor of Science)",
+              "path": "mathe/geowis/physik",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/geowis/physik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgeowis%2Fphysik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Graduiertenkolleg \"Dynamik globaler Kreisl�ufe im System Erde\"",
+          "path": "mathe/gradui",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/gradui&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fgradui&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Mathematik (Bachelor- und Masterstudieng�nge)",
+          "path": "mathe/mathem",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "1-Fach Bachelor Mathematik",
+              "path": "mathe/mathem/1fachb",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/1fachb&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2F1fachb&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "1-Fach Master Finanzmathematik",
+              "path": "mathe/mathem/1fachm_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/1fachm_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2F1fachm_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "1-Fach Master Mathematik",
+              "path": "mathe/mathem/1fachm",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/1fachm&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2F1fachm&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "2-F�cher Bachelor Mathematik",
+              "path": "mathe/mathem/2fcher",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/2fcher&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2F2fcher&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "2-F�cher Master Mathematik",
+              "path": "mathe/mathem/2fcher_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/2fcher_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2F2fcher_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Exportmodule der Mathematik",
+              "path": "mathe/mathem/export",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/export&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2Fexport&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Oberseminare und Kolloquien",
+              "path": "mathe/mathem/oberse",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/oberse&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2Foberse&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Vor- und Blockkurse",
+              "path": "mathe/mathem/vorkur",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/mathem/vorkur&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmathem%2Fvorkur&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Meteorologie Diplom",
+          "path": "mathe/meteor",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/meteor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fmeteor&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Nebenfachangebote der Sektion Biologie",
+          "path": "mathe/biolog_1",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "CAU-weite Wahlangebote",
+              "path": "mathe/biolog_1/cauwei",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/cauwei&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fcauwei&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Agrarwissenschaften / BA",
+              "path": "mathe/biolog_1/nebenf",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Agrarwissenschaften / MA",
+              "path": "mathe/biolog_1/nebenf_8",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_8&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_8&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang AgriGenomics",
+              "path": "mathe/biolog_1/biol24_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/biol24_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fbiol24_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Geographie - Botanik",
+              "path": "mathe/biolog_1/nebenf_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Geographie - Zoologie",
+              "path": "mathe/biolog_1/nebenf_2",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Informatik / BA",
+              "path": "mathe/biolog_1/nebenf_3",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_3&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Materialwissenschaften / MA",
+              "path": "mathe/biolog_1/nebenf_9",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_9&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_9&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Materialwissenschaften BA",
+              "path": "mathe/biolog_1/nebenf_4",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_4&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Mathematik / BA",
+              "path": "mathe/biolog_1/nebenf_5",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_5&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_5&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Ur - und Fr�hgeschichte / BA",
+              "path": "mathe/biolog_1/nebenf_7",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_7&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_7&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang Ur- und Fr�hgeschichte - Biowissenschaften / MA",
+              "path": "mathe/biolog_1/urundf",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/urundf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Furundf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nebenfachangebot f�r den Studiengang �kotrophologie / BA",
+              "path": "mathe/biolog_1/nebenf_6",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/biolog_1/nebenf_6&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fbiolog_1%2Fnebenf_6&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Ozeanographie als Nebenfach",
+          "path": "mathe/ozeano_1",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/ozeano_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fozeano_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Ozeanographie Diplom",
+          "path": "mathe/ozeano",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/ozeano&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fozeano&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Pharmazie - weiterf�hrende Veranstaltungen",
+          "path": "mathe/pharma_2",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma_2&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Pharmazie als Nebenfach",
+          "path": "mathe/pharma_1",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Pharmaz. Mastermodule",
+              "path": "mathe/pharma_1/pharma",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma_1/pharma&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma_1%2Fpharma&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Pharmazie Staatsexamen",
+          "path": "mathe/pharma",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "1. Abschnitt",
+              "path": "mathe/pharma/1absch",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma/1absch&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma%2F1absch&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "2. Abschnitt",
+              "path": "mathe/pharma/2absch",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/pharma/2absch&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fpharma%2F2absch&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Physik (versch. Studieng�nge)",
+          "path": "mathe/physik",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/physik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fphysik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Physik des Erdsystems: Meteorologie - Ozeanographie - Geophysik (Bachelor of Science)",
+          "path": "mathe/physik_1",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/physik_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fphysik_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Profil Lehramt",
+          "path": "mathe/profil",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/profil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Fprofil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Ur- und Fr�hgeschichte (versch. Studieng�nge)",
+          "path": "mathe/urundf",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=mathe/urundf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=mathe%2Furundf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        }
+      ]
+    },
+    {
+      "faculty": "Medicine",
+      "facultyCode": "medizi",
+      "totalCount": 360,
+      "englishCount": 16,
+      "germanCount": 3,
+      "bilingualCount": 0,
+      "unknownCount": 341,
+      "highConfidenceCount": 18,
+      "label": "Medizinische Fakult�t",
+      "path": "medizi",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture:tree&anonymous=1&ref=tlecture&sem=2026s&tdir=medizi&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&anonymous=1&ref=tlecture&sem=2026s&tdir=medizi&__e=519",
+      "children": [
+        {
+          "label": "Klinische Lehrveranstaltungen",
+          "path": "medizi/_klini",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Abteilung Sportmedizin",
+              "path": "medizi/_klini/abteil",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/abteil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fabteil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Allgemeinmedizin",
+              "path": "medizi/_klini/allgem",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/allgem&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fallgem&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Anthropologie",
+              "path": "medizi/_klini/anthro",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/anthro&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fanthro&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "An�sthesie",
+              "path": "medizi/_klini/ansthe",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/ansthe&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fansthe&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Augenheilkunde",
+              "path": "medizi/_klini/augenh",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/augenh&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Faugenh&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Biophysik und Medizinische Physik",
+              "path": "medizi/_klini/biophy",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/biophy&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fbiophy&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Chirurgie, Herz- und Gef��chirurgie und Unfallchirurgie",
+              "path": "medizi/_klini/chirur",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/chirur&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fchirur&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Dermatologie, Venerologie und Allergologie",
+              "path": "medizi/_klini/dermat",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/dermat&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fdermat&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Diagnostische Radiologie, Strahlentherapie (Radioonkologie), Nuklearmedizin",
+              "path": "medizi/_klini/diagno",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/diagno&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fdiagno&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Epidemiologie",
+              "path": "medizi/_klini/epidem",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/epidem&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fepidem&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Experimentelle Medizin",
+              "path": "medizi/_klini/experi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/experi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fexperi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Geschichte der Medizin und der Pharmazie",
+              "path": "medizi/_klini/geschi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/geschi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fgeschi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Gyn�kologie und Geburtshilfe",
+              "path": "medizi/_klini/gynkol",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/gynkol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fgynkol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Hals-, Nasen-, Ohrenkrankheiten",
+              "path": "medizi/_klini/halsna",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/halsna&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fhalsna&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Humangenetik",
+              "path": "medizi/_klini/humang",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/humang&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fhumang&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Immunologie",
+              "path": "medizi/_klini/immuno",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/immuno&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fimmuno&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Innere Medizin (I. Medizinische Klinik)",
+              "path": "medizi/_klini/innere",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/innere&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Finnere&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Innere Medizin (II. Medizinische Klinik)",
+              "path": "medizi/_klini/innere_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/innere_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Finnere_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Klinische Chemie",
+              "path": "medizi/_klini/klinis_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/klinis_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fklinis_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Klinische Molekularbiologie",
+              "path": "medizi/_klini/klinis",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/klinis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fklinis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Medizinische Informatik und Statistik",
+              "path": "medizi/_klini/medizi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/medizi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fmedizi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Mikrobiologie und Hygiene",
+              "path": "medizi/_klini/mikrob",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/mikrob&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fmikrob&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Nervenheilkunde",
+              "path": "medizi/_klini/nerven",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/nerven&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fnerven&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Neurochirurgie",
+              "path": "medizi/_klini/neuroc",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/neuroc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fneuroc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Orthop�die",
+              "path": "medizi/_klini/orthop",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/orthop&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Forthop&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Pathologie",
+              "path": "medizi/_klini/pathol",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/pathol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fpathol&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Pflichtveranstaltungen",
+              "path": "medizi/_klini/pflich",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/pflich&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fpflich&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Pharmakologie und Toxikologie",
+              "path": "medizi/_klini/pharma",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/pharma&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fpharma&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Physikalische Therapie und medizinische Klimatologie",
+              "path": "medizi/_klini/physik",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/physik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fphysik&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "P�diatrie",
+              "path": "medizi/_klini/pdiatr",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/pdiatr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fpdiatr&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Rechtsmedizin, Sozialmedizin, Arbeitsmedizin, Ethik und Sexualmedizin",
+              "path": "medizi/_klini/rechts",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/rechts&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Frechts&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Transfusionsmedizin",
+              "path": "medizi/_klini/transf",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/transf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Ftransf&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Urologie",
+              "path": "medizi/_klini/urolog",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/urolog&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Furolog&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Zahn-, Mund- und Kieferheilkunde",
+              "path": "medizi/_klini/zahnmu",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_klini/zahnmu&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_klini%2Fzahnmu&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "Medical Life Sciences (Master-Studiengang)",
+          "path": "medizi/medica",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/medica&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2Fmedica&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Pflegep�dagogik",
+          "path": "medizi/pflege",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/pflege&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2Fpflege&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Vorklinische Lehrveranstaltungen",
+          "path": "medizi/_vorkl",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Anatomie",
+              "path": "medizi/_vorkl/anatom",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl/anatom&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl%2Fanatom&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Biochemie",
+              "path": "medizi/_vorkl/bioche",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl/bioche&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl%2Fbioche&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Einf�hrung in die Klinische Medizin",
+              "path": "medizi/_vorkl/pflich_1",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl/pflich_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl%2Fpflich_1&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Medizinische Psychologie und Soziologie",
+              "path": "medizi/_vorkl/medizi",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl/medizi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl%2Fmedizi&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Pflichtveranstaltungen",
+              "path": "medizi/_vorkl/pflich",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl/pflich&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl%2Fpflich&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Physiologie",
+              "path": "medizi/_vorkl/physio",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=medizi/_vorkl/physio&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=medizi%2F_vorkl%2Fphysio&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "faculty": "Profiles and Interdisciplinary",
+      "facultyCode": "profil",
+      "totalCount": 18,
+      "englishCount": 0,
+      "germanCount": 0,
+      "bilingualCount": 0,
+      "unknownCount": 18,
+      "highConfidenceCount": 0,
+      "label": "Profil Lehramt an Gymnasien und Gemeinschaftsschulen",
+      "path": "profil",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=profil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=profil&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+      "children": [
+        {
+          "label": "2-F�cher-Bachelorstudiengang",
+          "path": "profil/bachel",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=profil/bachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=profil%2Fbachel&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "2-F�cher-Masterstudiengang",
+          "path": "profil/master",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=profil/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=profil%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "Extracurriculare Angebote",
+          "path": "profil/extrac",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=profil/extrac&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=profil%2Fextrac&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        }
+      ]
+    },
+    {
+      "faculty": "Theology",
+      "facultyCode": "theol",
+      "totalCount": 156,
+      "englishCount": 0,
+      "germanCount": 4,
+      "bilingualCount": 0,
+      "unknownCount": 152,
+      "highConfidenceCount": 0,
+      "label": "Theologische Fakult�t",
+      "path": "theol",
+      "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture:tree&anonymous=1&ref=tlecture&sem=2026s&tdir=theol&__e=519",
+      "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&anonymous=1&ref=tlecture&sem=2026s&tdir=theol&__e=519",
+      "children": [
+        {
+          "label": "1. Sprachen",
+          "path": "theol/_1spra",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_1spra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_1spra&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "10. Projektwoche / Exkursionen",
+          "path": "theol/projek",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/projek&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fprojek&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "11. Kirchenrecht",
+          "path": "theol/_9kirc",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_9kirc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_9kirc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "12. Masterstudiengang Religion und Ethik",
+          "path": "theol/master",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/master&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fmaster&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": [
+            {
+              "label": "Abschlussmodul",
+              "path": "theol/master/abschl",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/master/abschl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fmaster%2Fabschl&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Grundmodule",
+              "path": "theol/master/grundm",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/master/grundm&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fmaster%2Fgrundm&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Praxismodul",
+              "path": "theol/master/praxis",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/master/praxis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fmaster%2Fpraxis&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            },
+            {
+              "label": "Vertiefende Aufbaumodule",
+              "path": "theol/master/vertie",
+              "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/master/vertie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fmaster%2Fvertie&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+              "children": []
+            }
+          ]
+        },
+        {
+          "label": "13. Themen zu Gleichstellung und Diversit�t",
+          "path": "theol/themen",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/themen&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Fthemen&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "2. Interdisziplin�re Lehrveranstaltungen",
+          "path": "theol/_2inte",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_2inte&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_2inte&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "3. Facherg�nzung",
+          "path": "theol/facher",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/facher&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2Ffacher&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "4. Altes Testament",
+          "path": "theol/_3alte",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_3alte&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_3alte&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "5. Neues Testament",
+          "path": "theol/_4neue",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_4neue&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_4neue&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "6. Kirchengeschichte",
+          "path": "theol/_5kirc",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_5kirc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_5kirc&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "7. Systematische Theologie",
+          "path": "theol/_6syst",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_6syst&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_6syst&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "8. Praktische Theologie",
+          "path": "theol/_prakt",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_prakt&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_prakt&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        },
+        {
+          "label": "9. Religions-, Missions- und �kumenewissenschaft",
+          "path": "theol/_8reli",
+          "sourceUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&tdir=theol/_8reli&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "treeUrl": "https://univis.uni-kiel.de/form?__s=2&dsc=anew%2Ftlecture%3Atree&tdir=theol%2F_8reli&anonymous=1&ref=tlecture&sem=2026s&__e=519",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

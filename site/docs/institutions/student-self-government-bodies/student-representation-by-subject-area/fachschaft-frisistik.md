@@ -1,0 +1,5 @@
+# Fachschaft Frisistik
+
+- [Back to institutions overview](/institutions/)
+
+<InstitutionsBrowser />

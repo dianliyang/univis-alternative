@@ -1,0 +1,118 @@
+:root {
+  --vp-c-brand-1: #0f6a52;
+  --vp-c-brand-2: #168566;
+  --vp-c-brand-3: #0d5643;
+  --vp-c-brand-soft: rgba(15, 106, 82, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0f6a52 20%, #c78d2a 90%);
+  --vp-home-hero-image-background-image: radial-gradient(circle at center, rgba(199, 141, 42, 0.24), rgba(15, 106, 82, 0.14));
+  --vp-home-hero-image-filter: blur(54px);
+}
+
+.dark {
+  --vp-c-brand-1: #5ac4a1;
+  --vp-c-brand-2: #7cd3b6;
+  --vp-c-brand-3: #43aa89;
+  --vp-c-brand-soft: rgba(90, 196, 161, 0.18);
+  --vp-home-hero-name-background: linear-gradient(120deg, #89e2c3 10%, #f0c16e 90%);
+}
+
+.VPHome {
+  padding-bottom: 64px;
+}
+
+.VPNavBarTitle .logo {
+  width: 22px;
+  height: 22px;
+}
+
+.VPHomeHero .container {
+  max-width: 1240px;
+}
+
+.VPHomeHero .main {
+  max-width: 720px;
+}
+
+.VPHomeHero .name {
+  letter-spacing: -0.03em;
+}
+
+.VPHomeHero .text {
+  max-width: 13ch;
+  letter-spacing: -0.02em;
+}
+
+.VPHomeHero .tagline {
+  max-width: 56rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.VPHomeHero .actions {
+  gap: 12px;
+}
+
+.VPHomeHero .action .VPButton {
+  border-radius: 999px;
+}
+
+.VPFeatures {
+  padding-top: 12px;
+}
+
+.VPFeatures .container {
+  max-width: 1240px;
+}
+
+.VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 72%, var(--vp-c-bg) 28%);
+}
+
+.VPFeature .title {
+  letter-spacing: -0.01em;
+}
+
+.VPFeature .details {
+  line-height: 1.65;
+  max-width: 32ch;
+}
+
+.VPSidebarItem.level-1 .text {
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.landing-intro {
+  margin: 0.25rem 0 1.5rem;
+  padding: 0.5rem 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.7;
+}
+
+.lecture-node-page .VPDoc .container {
+  max-width: 1440px;
+}
+
+.lecture-node-page .VPDoc .content,
+.lecture-node-page .VPDoc .content-container {
+  max-width: none;
+}
+
+.lecture-node-page .vp-doc {
+  max-width: none;
+}
+
+.VPDoc.has-sidebar.lecture-node-page .content {
+  --vp-sidebar-width: 360px;
+}
+
+.lecture-node-page .VPSidebarItem.level-1 + .VPSidebarItem.level-1 {
+  margin-top: 0.3rem;
+}
+
+.lecture-node-page .VPSidebarItem.level-1 .text {
+  padding: 0.45rem 0;
+}

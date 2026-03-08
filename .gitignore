@@ -21,4 +21,4 @@ site/docs/courses/*.md
 !site/docs/courses/catalog.md
 site/docs/semesters/*.md
 !site/docs/semesters/index.md
-site/public/data/*.json
+site/docs/public/data/*.json

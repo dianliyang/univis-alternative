@@ -1,13 +1,16 @@
 import DefaultTheme from "vitepress/theme";
 import type { Theme } from "vitepress";
-import CourseSearch from "../../components/CourseSearch.vue";
-import FacultyBrowser from "../../components/FacultyBrowser.vue";
+import InstitutionsBrowser from "../../components/InstitutionsBrowser.vue";
+import LecturesBrowser from "../../components/LecturesBrowser.vue";
+import SponsorCard from "../../components/SponsorCard.vue";
+import "./custom.css";
 
 const theme: Theme = {
   ...DefaultTheme,
   enhanceApp({ app }) {
-    app.component("CourseSearch", CourseSearch);
-    app.component("FacultyBrowser", FacultyBrowser);
+    app.component("InstitutionsBrowser", InstitutionsBrowser);
+    app.component("LecturesBrowser", LecturesBrowser);
+    app.component("SponsorCard", SponsorCard);
   }
 };
 

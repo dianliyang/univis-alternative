@@ -5,6 +5,7 @@ import { parseLectureExportXml } from "../src/parsers/lecture-xml.js";
 import { extractNodeXmlExportUrl, parseXmlExportPage } from "../src/parsers/xml-export.js";
 import { createTaskQueue } from "../src/utils/task-queue.js";
 import { readResponseText } from "../src/utils/http-text.js";
+import { retryAsync } from "../src/utils/retry.js";
 
 const rootDir = process.cwd();
 const semester = process.argv[2] ?? "2025w";
@@ -292,8 +293,8 @@ function toTreeUrl(sourceUrl: string): string {
 }
 
 async function fetchText(url: string): Promise<string> {
-  const response = await fetch(url, {
-    signal: AbortSignal.timeout(15000)
+  const response = await fetchWithRetry(url, {
+    signal: AbortSignal.timeout(20000)
   });
   if (!response.ok) {
     throw new Error(`Request failed with ${response.status} for ${url}`);
@@ -302,18 +303,52 @@ async function fetchText(url: string): Promise<string> {
 }
 
 async function postForm(url: string, body: URLSearchParams): Promise<string> {
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     method: "POST",
     headers: {
       "content-type": "application/x-www-form-urlencoded"
     },
     body,
-    signal: AbortSignal.timeout(15000)
+    signal: AbortSignal.timeout(20000)
   });
   if (!response.ok) {
     throw new Error(`Request failed with ${response.status} for ${url}`);
   }
   return readResponseText(response);
+}
+
+async function fetchWithRetry(input: string, init: RequestInit): Promise<Response> {
+  return retryAsync(
+    async () => {
+      const response = await fetch(input, init);
+      if (response.status >= 500 || response.status === 429) {
+        throw new Error(`Transient request failure ${response.status} for ${input}`);
+      }
+      return response;
+    },
+    {
+      maxAttempts: 3,
+      shouldRetry: isTransientFetchError
+    }
+  );
+}
+
+function isTransientFetchError(error: unknown): boolean {
+  if (!(error instanceof Error)) {
+    return false;
+  }
+
+  const message = error.message.toLowerCase();
+  return (
+    message.includes("transient request failure") ||
+    message.includes("timeout") ||
+    message.includes("timed out") ||
+    message.includes("econnreset") ||
+    message.includes("econnrefused") ||
+    message.includes("enotfound") ||
+    message.includes("fetch failed") ||
+    message.includes("socket hang up")
+  );
 }
 
 async function fetchLectureMembership(

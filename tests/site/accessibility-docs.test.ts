@@ -64,6 +64,9 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("force_tree_refresh:");
     expect(workflow).toContain("if: ${{ inputs.fresh_crawl == 'true' }}");
     expect(workflow).toContain("UNIVIS_FORCE_TREE_REFRESH: ${{ inputs.force_tree_refresh == 'true' && '1' || '0' }}");
+    expect(workflow).toContain("concurrency:");
+    expect(workflow).toContain("group: cloudflare-remote-pipeline");
+    expect(workflow).toContain("cancel-in-progress: false");
     expect(workflow).toContain("date +%s");
     expect(workflow).toContain("Phase timing summary");
   });
@@ -79,6 +82,9 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("actions/cache");
     expect(workflow).toContain("data/normalized");
     expect(workflow).not.toContain("npm run cf:deploy");
+    expect(workflow).toContain("concurrency:");
+    expect(workflow).toContain("group: cloudflare-remote-pipeline");
+    expect(workflow).toContain("cancel-in-progress: false");
     expect(workflow).toContain("Phase timing summary");
   });
 });

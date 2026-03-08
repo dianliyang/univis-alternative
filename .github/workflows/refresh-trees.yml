@@ -3,12 +3,16 @@ name: Refresh Trees
 on:
   workflow_dispatch:
 
+concurrency:
+  group: cloudflare-remote-pipeline
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      UNIVIS_TREE_CONCURRENCY: "8"
+      UNIVIS_TREE_CONCURRENCY: "4"
       UNIVIS_FORCE_TREE_REFRESH: "1"
 
     steps:

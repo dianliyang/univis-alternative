@@ -1,4 +1,11 @@
-export const PUBLIC_DATA_FILES = ["catalog.json", "faculty-browser.json", "faculty-summary.json", "manifest.json", "search-index.json"] as const;
+export const PUBLIC_DATA_FILES = [
+  "catalog.json",
+  "institution-summary.json",
+  "institutions-organizations.json",
+  "lectures-browser.json",
+  "manifest.json",
+  "search-index.json"
+] as const;
 
 const PUBLIC_DATA_FILE_SET = new Set<string>(PUBLIC_DATA_FILES);
 

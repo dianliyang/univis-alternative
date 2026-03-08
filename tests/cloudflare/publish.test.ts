@@ -18,8 +18,9 @@ describe("published data collection", () => {
     const dataDir = join(root, "site", "public", "data");
     await mkdir(dataDir, { recursive: true });
     await writeFile(join(dataDir, "catalog.json"), "[]");
-    await writeFile(join(dataDir, "faculty-browser.json"), "[]");
-    await writeFile(join(dataDir, "faculty-summary.json"), "[]");
+    await writeFile(join(dataDir, "institution-summary.json"), "[]");
+    await writeFile(join(dataDir, "institutions-organizations.json"), "[]");
+    await writeFile(join(dataDir, "lectures-browser.json"), "[]");
     await writeFile(join(dataDir, "manifest.json"), "{}");
     await writeFile(join(dataDir, "search-index.json"), "[]");
 
@@ -27,8 +28,9 @@ describe("published data collection", () => {
 
     expect(entries.map((entry) => entry.objectKey)).toEqual([
       "snapshots/2025w/catalog.json",
-      "snapshots/2025w/faculty-browser.json",
-      "snapshots/2025w/faculty-summary.json",
+      "snapshots/2025w/institution-summary.json",
+      "snapshots/2025w/institutions-organizations.json",
+      "snapshots/2025w/lectures-browser.json",
       "snapshots/2025w/manifest.json",
       "snapshots/2025w/search-index.json"
     ]);

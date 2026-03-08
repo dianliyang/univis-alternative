@@ -4,7 +4,8 @@ import { buildPublishedDataKey, resolvePublishedDataFile } from "../../src/cloud
 describe("cloudflare published data helpers", () => {
   it("recognizes allowed API data files", () => {
     expect(resolvePublishedDataFile("/api/data/catalog.json")).toBe("catalog.json");
-    expect(resolvePublishedDataFile("/api/data/faculty-browser.json")).toBe("faculty-browser.json");
+    expect(resolvePublishedDataFile("/api/data/lectures-browser.json")).toBe("lectures-browser.json");
+    expect(resolvePublishedDataFile("/api/data/institutions-organizations.json")).toBe("institutions-organizations.json");
     expect(resolvePublishedDataFile("/api/data/not-allowed.json")).toBeNull();
     expect(resolvePublishedDataFile("/courses/")).toBeNull();
   });

@@ -49,7 +49,9 @@ export function slugify(value: string): string {
 export function boundedSlug(value: string, maxLength = 88): string {
   const slug = slugify(value);
   if (slug.length <= maxLength) {
-    return slug;
+    return slug || "id";
   }
-  return slug.slice(0, maxLength).replace(/-+$/g, "");
+  const hash = hashString(value).slice(0, 6);
+  const truncated = slug.slice(0, maxLength - 7).replace(/-+$/g, "");
+  return truncated ? `${truncated}-${hash}` : hash;
 }

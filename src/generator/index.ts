@@ -4,7 +4,7 @@ import type { ParsedDirectoryNode } from "../parsers/directory.js";
 import type { NormalizedCourse } from "../types.js";
 import { compareSemesterCodes } from "../utils/semester.js";
 import { deriveFacultyFromSourceUrl } from "../utils/faculty.js";
-import { slugify } from "../utils/url.js";
+import { boundedSlug, slugify } from "../utils/url.js";
 
 export interface BuildManifest {
   generatedAt: string;
@@ -420,16 +420,23 @@ function toBrowserLectureRefs(
   courseRouteById: Map<string, string>,
   nodeRoute: string
 ): BrowserLectureRef[] {
-  return lectures.map((lecture) => ({
-    key: lecture.key,
-    id: lecture.id,
-    text: lectureDisplayTitle(lecture.title.en ?? lecture.title.de ?? lecture.id),
-    textDe: lecture.title.de ? lectureDisplayTitle(lecture.title.de) : undefined,
-    route: courseRouteById.get(lecture.id) ?? `/courses/membership/${slugify(`${lecture.title.en ?? lecture.title.de ?? lecture.id}-${lecture.id}`)}`,
-    detailRoute: `${nodeRoute}/${lectureDetailSegment(courseRouteById.get(lecture.id) ?? `/courses/membership/${slugify(`${lecture.title.en ?? lecture.title.de ?? lecture.id}-${lecture.id}`)}`)}`,
-    sourceUrl: lecture.sourceUrl.en ?? lecture.sourceUrl.de ?? "",
-    sourceUrlDe: lecture.sourceUrl.de
-  }));
+  return lectures.map((lecture) => {
+    const membershipSlug = boundedSlug(`${lecture.title.en ?? lecture.title.de ?? lecture.id}-${lecture.id}`);
+    const membershipRoute = `/courses/membership/${membershipSlug}`;
+    const route = courseRouteById.get(lecture.id) ?? membershipRoute;
+    const detailRoute = `${nodeRoute}/${lectureDetailSegment(route)}`;
+
+    return {
+      key: lecture.key,
+      id: lecture.id,
+      text: lectureDisplayTitle(lecture.title.en ?? lecture.title.de ?? lecture.id),
+      textDe: lecture.title.de ? lectureDisplayTitle(lecture.title.de) : undefined,
+      route,
+      detailRoute,
+      sourceUrl: lecture.sourceUrl.en ?? lecture.sourceUrl.de ?? "",
+      sourceUrlDe: lecture.sourceUrl.de
+    };
+  });
 }
 
 function toTreeUrl(sourceUrl: string): string {
@@ -723,21 +730,22 @@ function collectMembershipLectures(nodes: LecturesBrowserNode[]): BrowserLecture
 }
 
 function routeSegment(label: string): string {
-  return slugify(
+  return boundedSlug(
     label
       .replace(/^faculty of\s+/i, "")
       .replace(/^department of\s+/i, "")
       .replace(/^institute of\s+/i, "")
       .replace(/^fakult[aä]t\s+f[uü]r\s+/i, "")
       .replace(/^institut f[uü]r\s+/i, "")
-      .trim()
+      .trim(),
+    64
   );
 }
 
 function lectureDetailSegment(routeOrId: string): string {
   const normalized = routeOrId.replace(/\/+$/, "");
   const lastSegment = normalized.split("/").filter(Boolean).at(-1);
-  return slugify(lastSegment ?? routeOrId);
+  return boundedSlug(lastSegment ?? routeOrId, 64);
 }
 
 function lectureDisplayTitle(title: string): string {

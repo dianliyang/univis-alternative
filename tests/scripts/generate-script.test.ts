@@ -341,6 +341,25 @@ describe("generate script organization tree loading", () => {
     await expect(shouldRefreshTrees(rootDir, "2026s")).resolves.toBe(true);
   });
 
+  it("refreshes trees when a required root membership artifact is stale", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-prepare-trees-"));
+    const normalizedDir = join(rootDir, "data", "normalized");
+    await mkdir(normalizedDir, { recursive: true });
+
+    await writeFile(join(normalizedDir, "lecture-tree-bilingual-2026s-root.json"), JSON.stringify({ path: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "lecture-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "tlecture", generatedAt: "2025-01-01T00:00:00.000Z", nodes: [] })
+    );
+    await writeFile(join(normalizedDir, "organization-tree-bilingual-2026s-root.json"), JSON.stringify({ dir: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "organization-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "lecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+
+    await expect(shouldRefreshTrees(rootDir, "2026s", new Date("2026-03-08T00:00:00.000Z"))).resolves.toBe(true);
+  });
+
   it("detects missing top-level branch artifacts from existing root trees", async () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-prepare-trees-"));
     const normalizedDir = join(rootDir, "data", "normalized");
@@ -382,6 +401,42 @@ describe("generate script organization tree loading", () => {
     await expect(findMissingTreeBranches(rootDir, "2026s")).resolves.toEqual({
       lecture: ["rechts"],
       organization: ["rechts"]
+    });
+  });
+
+  it("detects stale top-level branch membership artifacts", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-prepare-trees-"));
+    const normalizedDir = join(rootDir, "data", "normalized");
+    await mkdir(normalizedDir, { recursive: true });
+
+    await writeFile(
+      join(normalizedDir, "lecture-tree-bilingual-2026s-root.json"),
+      JSON.stringify({
+        path: "",
+        children: [{ path: "techn" }]
+      })
+    );
+    await writeFile(
+      join(normalizedDir, "organization-tree-bilingual-2026s-root.json"),
+      JSON.stringify({
+        dir: "",
+        children: [{ dir: "techn" }]
+      })
+    );
+    await writeFile(join(normalizedDir, "lecture-tree-bilingual-2026s-techn.json"), JSON.stringify({ path: "techn", children: [] }));
+    await writeFile(
+      join(normalizedDir, "lecture-tree-membership-bilingual-2026s-techn.json"),
+      JSON.stringify({ semester: "2026s", kind: "tlecture", generatedAt: "2025-01-01T00:00:00.000Z", nodes: [] })
+    );
+    await writeFile(join(normalizedDir, "organization-tree-bilingual-2026s-techn.json"), JSON.stringify({ dir: "techn", children: [] }));
+    await writeFile(
+      join(normalizedDir, "organization-tree-membership-bilingual-2026s-techn.json"),
+      JSON.stringify({ semester: "2026s", kind: "lecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+
+    await expect(findMissingTreeBranches(rootDir, "2026s", new Date("2026-03-08T00:00:00.000Z"))).resolves.toEqual({
+      lecture: ["techn"],
+      organization: []
     });
   });
 });

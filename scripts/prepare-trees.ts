@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { compareSemesterCodes, getRecentSemesterCodes } from "../src/utils/semester.js";
 
 const rootDir = process.cwd();
+const DEFAULT_TREE_MAX_AGE_HOURS = Number(process.env.UNIVIS_TREE_MAX_AGE_HOURS ?? "168");
 const REQUIRED_ROOT_ARTIFACT_PREFIXES = [
   "lecture-tree-bilingual",
   "lecture-tree-membership-bilingual",
@@ -17,6 +18,10 @@ interface RootLectureTree {
 
 interface RootOrganizationTree {
   children?: Array<{ dir: string }>;
+}
+
+interface GeneratedArtifact {
+  generatedAt?: string;
 }
 
 export async function resolveLatestBuildSemester(projectRoot: string): Promise<string> {
@@ -40,16 +45,19 @@ export function extractSemesterCode(urlText: string): string | null {
   }
 }
 
-export async function shouldRefreshTrees(projectRoot: string, semester: string): Promise<boolean> {
+export async function shouldRefreshTrees(projectRoot: string, semester: string, referenceDate = new Date()): Promise<boolean> {
   if (process.env.UNIVIS_FORCE_TREE_REFRESH === "1") {
     return true;
   }
 
   for (const prefix of REQUIRED_ROOT_ARTIFACT_PREFIXES) {
     const artifactPath = `${projectRoot}/data/normalized/${prefix}-${semester}-root.json`;
-    try {
-      await access(artifactPath);
-    } catch {
+    const exists = await artifactExists(artifactPath);
+    if (!exists) {
+      return true;
+    }
+
+    if (prefix.includes("membership") && (await isArtifactStale(artifactPath, referenceDate))) {
       return true;
     }
   }
@@ -59,7 +67,8 @@ export async function shouldRefreshTrees(projectRoot: string, semester: string):
 
 export async function findMissingTreeBranches(
   projectRoot: string,
-  semester: string
+  semester: string,
+  referenceDate = new Date()
 ): Promise<{ lecture: string[]; organization: string[] }> {
   const normalizedDir = `${projectRoot}/data/normalized`;
   const lectureRoot = JSON.parse(
@@ -74,14 +83,16 @@ export async function findMissingTreeBranches(
     semester,
     lectureRoot.children?.map((child) => child.path).filter(Boolean) ?? [],
     "lecture-tree-bilingual",
-    "lecture-tree-membership-bilingual"
+    "lecture-tree-membership-bilingual",
+    referenceDate
   );
   const organization = await collectMissingBranches(
     normalizedDir,
     semester,
     organizationRoot.children?.map((child) => child.dir).filter(Boolean) ?? [],
     "organization-tree-bilingual",
-    "organization-tree-membership-bilingual"
+    "organization-tree-membership-bilingual",
+    referenceDate
   );
 
   return { lecture, organization };
@@ -123,7 +134,8 @@ async function collectMissingBranches(
   semester: string,
   branches: string[],
   treePrefix: string,
-  membershipPrefix: string
+  membershipPrefix: string,
+  referenceDate: Date
 ): Promise<string[]> {
   const missing: string[] = [];
 
@@ -132,7 +144,7 @@ async function collectMissingBranches(
     const treePath = `${normalizedDir}/${treePrefix}-${semester}-${slug}.json`;
     const membershipPath = `${normalizedDir}/${membershipPrefix}-${semester}-${slug}.json`;
     const exists = await Promise.all([artifactExists(treePath), artifactExists(membershipPath)]);
-    if (!exists.every(Boolean)) {
+    if (!exists.every(Boolean) || (exists[1] && (await isArtifactStale(membershipPath, referenceDate)))) {
       missing.push(branch);
     }
   }
@@ -147,6 +159,21 @@ async function artifactExists(path: string): Promise<boolean> {
   } catch {
     return false;
   }
+}
+
+async function isArtifactStale(path: string, referenceDate: Date): Promise<boolean> {
+  const artifact = JSON.parse(await readFile(path, "utf8")) as GeneratedArtifact;
+  if (!artifact.generatedAt) {
+    return true;
+  }
+
+  const generatedAt = new Date(artifact.generatedAt);
+  if (Number.isNaN(generatedAt.getTime())) {
+    return true;
+  }
+
+  const ageHours = (referenceDate.getTime() - generatedAt.getTime()) / (1000 * 60 * 60);
+  return ageHours > DEFAULT_TREE_MAX_AGE_HOURS;
 }
 
 function branchSlug(value: string): string {

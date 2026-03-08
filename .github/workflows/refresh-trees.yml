@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      UNIVIS_TREE_CONCURRENCY: "1"
+      UNIVIS_TREE_CONCURRENCY: "8"
       UNIVIS_FORCE_TREE_REFRESH: "1"
 
     steps:
@@ -30,11 +30,18 @@ jobs:
             data/normalized
           key: univis-data-${{ runner.os }}-v1
 
+      - name: Start phase timer
+        run: echo "WORKFLOW_START=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Install dependencies
         run: npm ci
 
       - name: Refresh tree artifacts
-        run: npm run prepare:trees
+        run: |
+          phase_start=$(date +%s)
+          npm run prepare:trees
+          phase_end=$(date +%s)
+          echo "TREE_REFRESH_SECONDS=$((phase_end - phase_start))" >> "$GITHUB_ENV"
 
       - name: Save UnivIS data cache
         if: success()
@@ -45,3 +52,12 @@ jobs:
             data/raw
             data/normalized
           key: univis-data-${{ runner.os }}-v1
+
+      - name: Phase timing summary
+        if: always()
+        run: |
+          workflow_end=$(date +%s)
+          total_seconds=$((workflow_end - WORKFLOW_START))
+          echo "Phase timing summary"
+          echo "tree_refresh=${TREE_REFRESH_SECONDS:-0}s"
+          echo "total=${total_seconds}s"

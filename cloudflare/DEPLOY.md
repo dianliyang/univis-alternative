@@ -118,6 +118,8 @@ Defaults are incremental:
 
 That means the default remote deploy reuses cached/local artifacts when possible and only does the expensive remote work when you explicitly request it.
 
+Both workflows also print a phase timing summary at the end so you can see where runtime is going.
+
 To use it:
 
 1. Add the required GitHub repository secrets.

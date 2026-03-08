@@ -19,7 +19,7 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      UNIVIS_TREE_CONCURRENCY: "1"
+      UNIVIS_TREE_CONCURRENCY: "8"
       UNIVIS_FORCE_TREE_REFRESH: ${{ inputs.force_tree_refresh == 'true' && '1' || '0' }}
 
     steps:
@@ -44,18 +44,37 @@ jobs:
             data/normalized
           key: univis-data-${{ runner.os }}-v1
 
+      - name: Start phase timer
+        run: echo "WORKFLOW_START=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Fetch fresh UnivIS data
         if: ${{ inputs.fresh_crawl == 'true' }}
-        run: npm run fetch:data
+        run: |
+          phase_start=$(date +%s)
+          npm run fetch:data
+          phase_end=$(date +%s)
+          echo "FETCH_SECONDS=$((phase_end - phase_start))" >> "$GITHUB_ENV"
 
       - name: Build Cloudflare artifacts
-        run: npm run cf:build
+        run: |
+          phase_start=$(date +%s)
+          npm run cf:build
+          phase_end=$(date +%s)
+          echo "BUILD_SECONDS=$((phase_end - phase_start))" >> "$GITHUB_ENV"
 
       - name: Publish public data to R2
-        run: npm run cf:publish-data
+        run: |
+          phase_start=$(date +%s)
+          npm run cf:publish-data
+          phase_end=$(date +%s)
+          echo "PUBLISH_SECONDS=$((phase_end - phase_start))" >> "$GITHUB_ENV"
 
       - name: Deploy Worker
-        run: npm run cf:deploy
+        run: |
+          phase_start=$(date +%s)
+          npm run cf:deploy
+          phase_end=$(date +%s)
+          echo "DEPLOY_SECONDS=$((phase_end - phase_start))" >> "$GITHUB_ENV"
 
       - name: Save UnivIS data cache
         if: success()
@@ -66,3 +85,15 @@ jobs:
             data/raw
             data/normalized
           key: univis-data-${{ runner.os }}-v1
+
+      - name: Phase timing summary
+        if: always()
+        run: |
+          workflow_end=$(date +%s)
+          total_seconds=$((workflow_end - WORKFLOW_START))
+          echo "Phase timing summary"
+          echo "fetch=${FETCH_SECONDS:-0}s"
+          echo "build=${BUILD_SECONDS:-0}s"
+          echo "publish=${PUBLISH_SECONDS:-0}s"
+          echo "deploy=${DEPLOY_SECONDS:-0}s"
+          echo "total=${total_seconds}s"

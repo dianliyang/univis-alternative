@@ -40,6 +40,7 @@ describe("docs and scripts", () => {
     expect(deployDoc).toContain("refresh-trees.yml");
     expect(deployDoc).toContain("fresh_crawl");
     expect(deployDoc).toContain("force_tree_refresh");
+    expect(deployDoc).toContain("phase timing");
   });
 
   it("defines a manual remote deploy workflow", async () => {
@@ -63,6 +64,8 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("force_tree_refresh:");
     expect(workflow).toContain("if: ${{ inputs.fresh_crawl == 'true' }}");
     expect(workflow).toContain("UNIVIS_FORCE_TREE_REFRESH: ${{ inputs.force_tree_refresh == 'true' && '1' || '0' }}");
+    expect(workflow).toContain("date +%s");
+    expect(workflow).toContain("Phase timing summary");
   });
 
   it("defines a separate manual tree refresh workflow", async () => {
@@ -76,5 +79,6 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("actions/cache");
     expect(workflow).toContain("data/normalized");
     expect(workflow).not.toContain("npm run cf:deploy");
+    expect(workflow).toContain("Phase timing summary");
   });
 });

@@ -62,7 +62,28 @@ describe("browser artifacts", () => {
           sourceUrl: "https://univis.uni-kiel.de/form?dsc=anew/tlecture&tdir=mathe/mathem/1fachb&sem=2025w",
           children: []
         }
-      ]
+      ],
+      undefined,
+      undefined,
+      undefined,
+      {
+        semester: "2025w",
+        kind: "tlecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "mathe/mathem/1fachb",
+            lectures: [
+              {
+                key: "Lecture.abc123",
+                id: "abc123",
+                title: { en: "English Literature" },
+                sourceUrl: { en: "https://univis.uni-kiel.de/form?dsc=anew/lecture_view&lvs=x&sem=2025w&tdir=mathe/mathem" }
+              }
+            ]
+          }
+        ]
+      }
     );
 
     const browser = JSON.parse(await readFile(join(rootDir, "data", "build", "lectures-browser.json"), "utf8"));
@@ -80,7 +101,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-browser-artifacts-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "gemei-1",
+          slug: "joint-units-course-gemei1",
+          sourceUrl: "https://example.test/gemei-1",
+          title: "Joint Units Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Joint Units Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [
         {
           label: "Lecture Directory",
@@ -104,7 +139,21 @@ describe("browser artifacts", () => {
           sourceUrl: "https://univis.uni-kiel.de/form?dsc=anew/tlecture&tdir=gemei&sem=2025w",
           children: []
         }
-      ]
+      ],
+      undefined,
+      undefined,
+      undefined,
+      {
+        semester: "2025w",
+        kind: "tlecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "gemei",
+            lectures: [{ key: "Lecture.gemei-1", id: "gemei-1", title: { en: "Joint Units Course" }, sourceUrl: { en: "https://example.test/gemei-1" } }]
+          }
+        ]
+      }
     );
 
     const browser = JSON.parse(await readFile(join(rootDir, "data", "build", "lectures-browser.json"), "utf8"));
@@ -115,7 +164,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-browser-artifacts-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "techn-1",
+          slug: "engineering-course-techn1",
+          sourceUrl: "https://example.test/techn-1",
+          title: "Engineering Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Engineering Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [
         {
           label: "Vorlesungsverzeichnis",
@@ -149,7 +212,21 @@ describe("browser artifacts", () => {
           sourceUrl: "https://univis.uni-kiel.de/form?dsc=anew/tlecture&lang=en&tdir=techn&sem=2025w",
           children: []
         }
-      ]
+      ],
+      undefined,
+      undefined,
+      undefined,
+      {
+        semester: "2025w",
+        kind: "tlecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "techn",
+            lectures: [{ key: "Lecture.techn-1", id: "techn-1", title: { en: "Engineering Course" }, sourceUrl: { en: "https://example.test/techn-1" } }]
+          }
+        ]
+      }
     );
 
     const browser = JSON.parse(await readFile(join(rootDir, "data", "build", "lectures-browser.json"), "utf8"));
@@ -160,7 +237,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-institutions-routes-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "inst-1",
+          slug: "institution-course-inst1",
+          sourceUrl: "https://example.test/inst-1",
+          title: "Institution Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Institution Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [],
       {
         dir: "",
@@ -181,6 +272,18 @@ describe("browser artifacts", () => {
                 children: []
               }
             ]
+          }
+        ]
+      },
+      undefined,
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "techn/infor",
+            lectures: [{ key: "Lecture.inst-1", id: "inst-1", title: { en: "Institution Course" }, sourceUrl: { en: "https://example.test/inst-1" } }]
           }
         ]
       }
@@ -315,7 +418,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-institutions-routes-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "org-1",
+          slug: "organization-course-org1",
+          sourceUrl: "https://example.test/org-1",
+          title: "Organization Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Organization Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [],
       {
         dir: "",
@@ -345,6 +462,17 @@ describe("browser artifacts", () => {
             children: []
           }
         ]
+      },
+      undefined,
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          { path: "praes", lectures: [{ key: "Lecture.org-1", id: "org-1", title: { en: "Organization Course" }, sourceUrl: { en: "https://example.test/org-1" } }] },
+          { path: "rechts", lectures: [{ key: "Lecture.org-1", id: "org-1", title: { en: "Organization Course" }, sourceUrl: { en: "https://example.test/org-1" } }] },
+          { path: "techn", lectures: [{ key: "Lecture.org-1", id: "org-1", title: { en: "Organization Course" }, sourceUrl: { en: "https://example.test/org-1" } }] }
+        ]
       }
     );
 
@@ -360,7 +488,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-institutions-routes-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "micro-1",
+          slug: "microelectronics-course-micro1",
+          sourceUrl: "https://example.test/micro-1",
+          title: "Microelectronics Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Microelectronics Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [],
       {
         dir: "",
@@ -392,6 +534,18 @@ describe("browser artifacts", () => {
             ]
           }
         ]
+      },
+      undefined,
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "techn/elekt/micro",
+            lectures: [{ key: "Lecture.micro-1", id: "micro-1", title: { en: "Microelectronics Course" }, sourceUrl: { en: "https://example.test/micro-1" } }]
+          }
+        ]
       }
     );
 
@@ -412,7 +566,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-institutions-routes-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "zbw-1",
+          slug: "zbw-course-zbw1",
+          sourceUrl: "https://example.test/zbw-1",
+          title: "ZBW Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "ZBW Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [],
       {
         dir: "",
@@ -433,6 +601,18 @@ describe("browser artifacts", () => {
                 children: []
               }
             ]
+          }
+        ]
+      },
+      undefined,
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "angegl/zbwdeu",
+            lectures: [{ key: "Lecture.zbw-1", id: "zbw-1", title: { en: "ZBW Course" }, sourceUrl: { en: "https://example.test/zbw-1" } }]
           }
         ]
       }
@@ -460,7 +640,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-institutions-routes-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "dup-1",
+          slug: "duplicate-course-dup1",
+          sourceUrl: "https://example.test/dup-1",
+          title: "Duplicate Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Duplicate Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [],
       {
         dir: "",
@@ -491,6 +685,18 @@ describe("browser artifacts", () => {
             ]
           }
         ]
+      },
+      undefined,
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          {
+            path: "techn/infor",
+            lectures: [{ key: "Lecture.dup-1", id: "dup-1", title: { en: "Duplicate Course" }, sourceUrl: { en: "https://example.test/dup-1" } }]
+          }
+        ]
       }
     );
 
@@ -503,7 +709,21 @@ describe("browser artifacts", () => {
     const rootDir = await mkdtemp(join(tmpdir(), "univis-institutions-routes-"));
     await generateBuildArtifacts(
       rootDir,
-      [],
+      [
+        {
+          id: "law-1",
+          slug: "law-course-law1",
+          sourceUrl: "https://example.test/law-1",
+          title: "Law Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Law Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-07T00:00:00.000Z"
+        }
+      ],
       [],
       {
         dir: "",
@@ -542,6 +762,17 @@ describe("browser artifacts", () => {
             ]
           }
         ]
+      },
+      undefined,
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-07T00:00:00.000Z",
+        nodes: [
+          { path: "rechts/walthe", lectures: [{ key: "Lecture.law-1", id: "law-1", title: { en: "Law Course" }, sourceUrl: { en: "https://example.test/law-1" } }] },
+          { path: "rechts/zentru", lectures: [{ key: "Lecture.law-1", id: "law-1", title: { en: "Law Course" }, sourceUrl: { en: "https://example.test/law-1" } }] },
+          { path: "rechts/gesell", lectures: [{ key: "Lecture.law-1", id: "law-1", title: { en: "Law Course" }, sourceUrl: { en: "https://example.test/law-1" } }] }
+        ]
       }
     );
 
@@ -549,5 +780,189 @@ describe("browser artifacts", () => {
     expect(organizations[0].children[0].text).toBe("Walther Schöcking Institute for International Law");
     expect(organizations[0].children[1].text).toBe("Zentrum für Gesundheitsrecht");
     expect(organizations[0].children[2].text).toBe("Gesellschaft für Betriebswirtschaft zu Kiel e.V.");
+  });
+
+  it("prunes empty lecture and institution branches recursively when no lectures survive", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-prune-empty-branches-"));
+    await generateBuildArtifacts(
+      rootDir,
+      [],
+      [],
+      {
+        dir: "",
+        children: [
+          {
+            dir: "techn",
+            label: { en: "Faculty of Engineering", de: "Technische Fakultät" },
+            children: [
+              {
+                dir: "techn/infor",
+                label: { en: "Department of Computer Science", de: "Institut für Informatik" },
+                children: [
+                  {
+                    dir: "techn/infor/empty",
+                    label: { en: "Empty Lab", de: "Leeres Labor" },
+                    children: []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: "",
+        label: { en: "Lecture Directory", de: "Vorlesungsverzeichnis" },
+        children: [
+          {
+            path: "techn",
+            label: { en: "Faculty of Engineering", de: "Technische Fakultät" },
+            sourceUrl: { en: "https://example.test/techn" },
+            treeUrl: { en: "https://example.test/tree/techn" },
+            children: [
+              {
+                path: "techn/empty",
+                label: { en: "Empty Branch", de: "Leerer Zweig" },
+                sourceUrl: { en: "https://example.test/techn/empty" },
+                treeUrl: { en: "https://example.test/tree/techn/empty" },
+                children: []
+              }
+            ]
+          }
+        ]
+      }
+    );
+
+    const lecturesBrowser = JSON.parse(await readFile(join(rootDir, "data", "build", "lectures-browser.json"), "utf8"));
+    const institutions = JSON.parse(await readFile(join(rootDir, "data", "build", "institutions-organizations.json"), "utf8"));
+
+    expect(lecturesBrowser.roots).toEqual([]);
+    expect(institutions).toEqual([]);
+  });
+
+  it("keeps only explicitly english courses in english outputs while german outputs keep all courses", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-language-filter-"));
+    await generateBuildArtifacts(
+      rootDir,
+      [
+        {
+          id: "en-1",
+          slug: "english-course-en1",
+          sourceUrl: "https://example.test/course/en-1",
+          title: "English Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "English Course",
+          language: "english",
+          languageConfidence: "high",
+          languageEvidence: ["english"],
+          lastSeen: "2026-03-08T00:00:00.000Z"
+        },
+        {
+          id: "de-1",
+          slug: "german-course-de1",
+          sourceUrl: "https://example.test/course/de-1",
+          title: "German Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "German Course",
+          language: "german",
+          languageConfidence: "high",
+          languageEvidence: ["german"],
+          lastSeen: "2026-03-08T00:00:00.000Z"
+        },
+        {
+          id: "unknown-1",
+          slug: "unknown-course-unknown1",
+          sourceUrl: "https://example.test/course/unknown-1",
+          title: "Unknown Course",
+          lecturers: [],
+          sessions: [],
+          searchText: "Unknown Course",
+          language: "unknown",
+          languageConfidence: "low",
+          languageEvidence: [],
+          lastSeen: "2026-03-08T00:00:00.000Z"
+        }
+      ],
+      [],
+      {
+        dir: "",
+        children: [
+          {
+            dir: "techn",
+            label: { en: "Faculty of Engineering", de: "Technische Fakultät" },
+            children: []
+          }
+        ]
+      },
+      {
+        path: "",
+        label: { en: "Lecture Directory", de: "Vorlesungsverzeichnis" },
+        children: [
+          {
+            path: "techn",
+            label: { en: "Faculty of Engineering", de: "Technische Fakultät" },
+            sourceUrl: { en: "https://example.test/techn" },
+            treeUrl: { en: "https://example.test/tree/techn" },
+            children: []
+          }
+        ]
+      },
+      {
+        semester: "2025w",
+        kind: "lecture",
+        generatedAt: "2026-03-08T00:00:00.000Z",
+        nodes: [
+          {
+            path: "techn",
+            lectures: [
+              { key: "Lecture.en-1", id: "en-1", title: { en: "English Course" }, sourceUrl: { en: "https://example.test/course/en-1" } },
+              { key: "Lecture.de-1", id: "de-1", title: { en: "German Course" }, sourceUrl: { en: "https://example.test/course/de-1" } },
+              { key: "Lecture.unknown-1", id: "unknown-1", title: { en: "Unknown Course" }, sourceUrl: { en: "https://example.test/course/unknown-1" } }
+            ]
+          }
+        ]
+      },
+      {
+        semester: "2025w",
+        kind: "tlecture",
+        generatedAt: "2026-03-08T00:00:00.000Z",
+        nodes: [
+          {
+            path: "techn",
+            lectures: [
+              { key: "Lecture.en-1", id: "en-1", title: { en: "English Course" }, sourceUrl: { en: "https://example.test/course/en-1" } },
+              { key: "Lecture.de-1", id: "de-1", title: { en: "German Course" }, sourceUrl: { en: "https://example.test/course/de-1" } },
+              { key: "Lecture.unknown-1", id: "unknown-1", title: { en: "Unknown Course" }, sourceUrl: { en: "https://example.test/course/unknown-1" } }
+            ]
+          }
+        ]
+      }
+    );
+
+    const lecturesBrowser = JSON.parse(await readFile(join(rootDir, "data", "build", "lectures-browser.json"), "utf8"));
+    const institutions = JSON.parse(await readFile(join(rootDir, "data", "build", "institutions-organizations.json"), "utf8"));
+    const englishLecturePage = await readFile(join(rootDir, "site", "docs", "lectures", "engineering", "index.md"), "utf8");
+    const germanLecturePage = await readFile(join(rootDir, "site", "docs", "de", "lectures", "engineering", "index.md"), "utf8");
+
+    expect(lecturesBrowser.roots[0].lectures.map((lecture: { id: string }) => lecture.id)).toEqual(["en-1"]);
+    expect(institutions[0].lectures.map((lecture: { id: string }) => lecture.id)).toEqual(["en-1"]);
+    await expect(readFile(join(rootDir, "site", "docs", "lectures", "engineering", "english-course-en1.md"), "utf8")).resolves.toContain(
+      "English Course"
+    );
+    await expect(readFile(join(rootDir, "site", "docs", "lectures", "engineering", "german-course-de1.md"), "utf8")).rejects.toThrow();
+    await expect(readFile(join(rootDir, "site", "docs", "lectures", "engineering", "unknown-course-unknown1.md"), "utf8")).rejects.toThrow();
+    await expect(readFile(join(rootDir, "site", "docs", "de", "lectures", "engineering", "english-course-en1.md"), "utf8")).resolves.toContain(
+      "English Course"
+    );
+    await expect(readFile(join(rootDir, "site", "docs", "de", "lectures", "engineering", "german-course-de1.md"), "utf8")).resolves.toContain(
+      "German Course"
+    );
+    await expect(readFile(join(rootDir, "site", "docs", "de", "lectures", "engineering", "unknown-course-unknown1.md"), "utf8")).resolves.toContain(
+      "Unknown Course"
+    );
+    expect(englishLecturePage).toContain("Choose a lecture from the sidebar");
+    expect(germanLecturePage).toContain("Wählen Sie eine Lehrveranstaltung in der Seitenleiste aus.");
   });
 });

@@ -117,6 +117,11 @@ interface InstitutionNode {
   children: InstitutionNode[];
 }
 
+interface LanguageMembershipMaps {
+  all: Map<string, MembershipLectureRef[]>;
+  englishOnly: Map<string, MembershipLectureRef[]>;
+}
+
 export async function generateBuildArtifacts(
   rootDir: string,
   courses: NormalizedCourse[],
@@ -151,10 +156,17 @@ export async function generateBuildArtifacts(
   const institutionSummary = buildInstitutionSummary(courses);
   const latestSemester = semesters.at(-1) ?? directorySemesters.at(-1);
   const courseRouteById = new Map(courses.map((course) => [course.id, `/courses/${course.slug}`] as const));
-  const lecturesByPath = new Map((lectureMembership?.nodes ?? []).map((node) => [node.path, node.lectures] as const));
-  const organizationLecturesByPath = new Map((organizationMembership?.nodes ?? []).map((node) => [node.path, node.lectures] as const));
-  const lecturesBrowser = buildLecturesBrowser(directories, latestSemester, lectureTree, lecturesByPath, courseRouteById);
-  const institutions = buildInstitutions(organizationTree, organizationLecturesByPath, courseRouteById);
+  const courseById = new Map(courses.map((course) => [course.id, course] as const));
+  const lectureMembershipMaps = buildLanguageMembershipMaps(lectureMembership, courseById);
+  const organizationMembershipMaps = buildLanguageMembershipMaps(organizationMembership, courseById);
+  const lecturesBrowser = buildLecturesBrowser(
+    directories,
+    latestSemester,
+    lectureTree,
+    lectureMembershipMaps.englishOnly,
+    courseRouteById
+  );
+  const institutions = buildInstitutions(organizationTree, organizationMembershipMaps.englishOnly, courseRouteById);
   const nodeMembership = buildNodeMembershipLookup(organizationMembership, lectureMembership);
 
   await writeFile(join(buildDir, "catalog.json"), JSON.stringify(courses, null, 2));
@@ -172,7 +184,15 @@ export async function generateBuildArtifacts(
   await writeFile(join(publicDir, "search-index.json"), JSON.stringify(searchIndex, null, 2));
   await writeFile(join(publicDir, "manifest.json"), JSON.stringify(manifest, null, 2));
 
-  await generateMarkdownRoutes(rootDir, courses, manifest, institutions, lecturesBrowser);
+  await generateMarkdownRoutes(
+    rootDir,
+    courses,
+    manifest,
+    institutions,
+    buildInstitutions(organizationTree, organizationMembershipMaps.all, courseRouteById),
+    lecturesBrowser,
+    buildLecturesBrowser(directories, latestSemester, lectureTree, lectureMembershipMaps.all, courseRouteById)
+  );
 
   return manifest;
 }
@@ -203,7 +223,8 @@ function buildInstitutions(
   courseRouteById: Map<string, string>
 ): InstitutionNode[] {
   const rootChildren = organizationTree?.children ?? [];
-  return rootChildren
+  return pruneEmptyInstitutionNodes(
+    rootChildren
     .map((node) => {
       const facultyText = normalizeOrganizationLabel(node.label?.en ?? node.label?.de ?? node.dir);
       const facultyRoute = `/institutions/${routeSegment(facultyText)}`;
@@ -216,7 +237,8 @@ function buildInstitutions(
         children: buildInstitutionChildren(node.children ?? [], facultyText, facultyRoute, lecturesByPath, courseRouteById)
       };
     })
-    .sort(compareTopLevelOrganizations);
+    .sort(compareTopLevelOrganizations)
+  );
 }
 
 function buildInstitutionChildren(
@@ -291,7 +313,9 @@ function buildLecturesBrowser(
 
     return {
       semester: latestSemester,
-      roots: lectureTree.children?.map((node) => toLecturesBrowserNode(node, nodeByPath, lecturesByPath, courseRouteById, "/lectures")) ?? []
+      roots: pruneEmptyLectureNodes(
+        lectureTree.children?.map((node) => toLecturesBrowserNode(node, nodeByPath, lecturesByPath, courseRouteById, "/lectures")) ?? []
+      )
     };
   }
 
@@ -307,25 +331,27 @@ function buildLecturesBrowser(
   const fallbackRoots = filteredDirectories.filter((entry) => entry.depth === minDepth);
   return {
     semester: latestSemester,
-    roots: rootNode
-      ? buildLecturesBrowserChildren(rootNode, nodeByPath, lecturesByPath, courseRouteById, "/lectures")
-      : fallbackRoots.map((node) => ({
-          text: node.label,
-          route: `/lectures/${routeSegment(node.label)}`,
-          path: node.path,
-          sourceUrl: node.sourceUrl,
-          sourceUrlDe: undefined,
-          treeUrl: toTreeUrl(node.sourceUrl),
-          treeUrlDe: undefined,
-          lectures: toBrowserLectureRefs(lecturesByPath.get(node.path) ?? [], courseRouteById, `/lectures/${routeSegment(node.label)}`),
-          children: buildLecturesBrowserChildren(
-            node,
-            nodeByPath,
-            lecturesByPath,
-            courseRouteById,
-            `/lectures/${routeSegment(node.label)}`
-          )
-        }))
+    roots: pruneEmptyLectureNodes(
+      rootNode
+        ? buildLecturesBrowserChildren(rootNode, nodeByPath, lecturesByPath, courseRouteById, "/lectures")
+        : fallbackRoots.map((node) => ({
+            text: node.label,
+            route: `/lectures/${routeSegment(node.label)}`,
+            path: node.path,
+            sourceUrl: node.sourceUrl,
+            sourceUrlDe: undefined,
+            treeUrl: toTreeUrl(node.sourceUrl),
+            treeUrlDe: undefined,
+            lectures: toBrowserLectureRefs(lecturesByPath.get(node.path) ?? [], courseRouteById, `/lectures/${routeSegment(node.label)}`),
+            children: buildLecturesBrowserChildren(
+              node,
+              nodeByPath,
+              lecturesByPath,
+              courseRouteById,
+              `/lectures/${routeSegment(node.label)}`
+            )
+          }))
+    )
   };
 }
 
@@ -439,6 +465,42 @@ function toBrowserLectureRefs(
   });
 }
 
+function buildLanguageMembershipMaps(
+  membership: TreeMembershipArtifact | undefined,
+  courseById: Map<string, NormalizedCourse>
+): LanguageMembershipMaps {
+  const all = new Map<string, MembershipLectureRef[]>();
+  const englishOnly = new Map<string, MembershipLectureRef[]>();
+
+  for (const node of membership?.nodes ?? []) {
+    all.set(node.path, node.lectures);
+    englishOnly.set(
+      node.path,
+      node.lectures.filter((lecture) => courseById.get(lecture.id)?.language === "english")
+    );
+  }
+
+  return { all, englishOnly };
+}
+
+function pruneEmptyLectureNodes(nodes: LecturesBrowserNode[]): LecturesBrowserNode[] {
+  return nodes
+    .map((node) => ({
+      ...node,
+      children: pruneEmptyLectureNodes(node.children)
+    }))
+    .filter((node) => node.lectures.length > 0 || node.children.length > 0);
+}
+
+function pruneEmptyInstitutionNodes(nodes: InstitutionNode[]): InstitutionNode[] {
+  return nodes
+    .map((node) => ({
+      ...node,
+      children: pruneEmptyInstitutionNodes(node.children)
+    }))
+    .filter((node) => node.lectures.length > 0 || node.children.length > 0);
+}
+
 function toTreeUrl(sourceUrl: string): string {
   if (!sourceUrl) {
     return "";
@@ -456,8 +518,10 @@ async function generateMarkdownRoutes(
   rootDir: string,
   courses: NormalizedCourse[],
   manifest: BuildManifest,
-  institutions: InstitutionNode[],
-  lecturesBrowser: LecturesBrowserArtifact
+  englishInstitutions: InstitutionNode[],
+  germanInstitutions: InstitutionNode[],
+  englishLecturesBrowser: LecturesBrowserArtifact,
+  germanLecturesBrowser: LecturesBrowserArtifact
 ): Promise<void> {
   const coursesDir = join(rootDir, "site", "docs", "courses");
   const semestersDir = join(rootDir, "site", "docs", "semesters");
@@ -499,7 +563,7 @@ ${course.description ?? "No description available."}
     await writeFile(join(coursesDir, `${course.slug}.md`), content);
   }
 
-  for (const lecture of collectMembershipLectures(lecturesBrowser.roots)) {
+  for (const lecture of collectMembershipLectures(germanLecturesBrowser.roots)) {
     const route = lecture.route ?? "";
     if (!route.startsWith("/courses/membership/")) {
       continue;
@@ -530,10 +594,10 @@ ${semesterCourses.map((course) => `- [${course.title}](/courses/${course.slug})`
     await writeFile(join(semestersDir, `${slugify(semester)}.md`), content);
   }
 
-  await generateInstitutionRoutes(rootDir, institutions, false);
-  await generateInstitutionRoutes(rootDir, institutions, true);
-  await generateLectureRoutes(rootDir, lecturesBrowser.roots, coursesById, false);
-  await generateLectureRoutes(rootDir, lecturesBrowser.roots, coursesById, true);
+  await generateInstitutionRoutes(rootDir, englishInstitutions, false);
+  await generateInstitutionRoutes(rootDir, germanInstitutions, true);
+  await generateLectureRoutes(rootDir, englishLecturesBrowser.roots, coursesById, false);
+  await generateLectureRoutes(rootDir, germanLecturesBrowser.roots, coursesById, true);
 }
 
 async function clearGeneratedMarkdown(dir: string): Promise<void> {

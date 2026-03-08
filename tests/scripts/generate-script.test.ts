@@ -3,11 +3,13 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  assertValidBuildInputs,
   loadLatestLectureTree,
   loadLatestLectureTreeMembership,
   loadLatestOrganizationTree,
   loadLatestOrganizationTreeMembership
 } from "../../scripts/generate.js";
+import { resolveLatestBuildSemester } from "../../scripts/prepare-trees.js";
 
 describe("generate script organization tree loading", () => {
   it("enriches the root tree with faculty-specific bilingual trees", async () => {
@@ -251,5 +253,55 @@ describe("generate script organization tree loading", () => {
     const membership = await loadLatestOrganizationTreeMembership(rootDir);
 
     expect(membership?.nodes.find((node) => node.path === "techn/infor")?.lectures[0]?.title.en).toBe("Distributed Systems");
+  });
+
+  it("derives the latest build semester from discovery seed URLs", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-prepare-trees-"));
+    const discoveryDir = join(rootDir, "data", "discovery");
+    await mkdir(discoveryDir, { recursive: true });
+
+    await writeFile(
+      join(discoveryDir, "seed-urls.json"),
+      JSON.stringify([
+        "https://univis.uni-kiel.de/form?dsc=anew/main&sem=2025w",
+        "https://univis.uni-kiel.de/form?dsc=anew/tlecture&sem=2026s",
+        "https://univis.uni-kiel.de/form?dsc=anew/main&sem=2024w"
+      ])
+    );
+
+    await expect(resolveLatestBuildSemester(rootDir)).resolves.toBe("2026s");
+  });
+
+  it("fails when bilingual tree roots are missing", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-generate-script-"));
+    const normalizedDir = join(rootDir, "data", "normalized");
+    await mkdir(normalizedDir, { recursive: true });
+
+    await writeFile(join(normalizedDir, "lecture-tree-bilingual-2026s-root.json"), JSON.stringify({ path: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "lecture-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "tlecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+
+    await expect(assertValidBuildInputs(rootDir)).rejects.toThrow("Missing required organization tree root artifact");
+  });
+
+  it("fails when lecture and organization trees come from different semesters", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-generate-script-"));
+    const normalizedDir = join(rootDir, "data", "normalized");
+    await mkdir(normalizedDir, { recursive: true });
+
+    await writeFile(join(normalizedDir, "lecture-tree-bilingual-2026s-root.json"), JSON.stringify({ path: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "lecture-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "tlecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+    await writeFile(join(normalizedDir, "organization-tree-bilingual-2025w-root.json"), JSON.stringify({ dir: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "organization-tree-membership-bilingual-2025w-root.json"),
+      JSON.stringify({ semester: "2025w", kind: "lecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+
+    await expect(assertValidBuildInputs(rootDir)).rejects.toThrow("Tree artifacts span multiple semesters");
   });
 });

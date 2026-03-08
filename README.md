@@ -25,6 +25,8 @@ The site keeps the public UnivIS structure, but makes it easier to browse throug
 
 - `npm run discover`
 - `npm run crawl`
+- `npm run fetch:data`
+- `npm run prepare:trees`
 - `npm run parse`
 - `npm run normalize`
 - `npm run generate`
@@ -43,12 +45,14 @@ The repo includes a Cloudflare Worker entrypoint at [cloudflare/worker.ts](./clo
 
 Typical deployment flow:
 
-1. `npm run build:data`
-2. `npm run build:site`
+1. `npm run fetch:data` when you want fresh remote data
+2. `npm run cf:build` rebuilds from existing local data after refreshing tree artifacts
 3. `wrangler deploy`
 4. upload published JSON artifacts to the R2 bucket under `latest/`
 
 Exact deployment commands are documented in [cloudflare/DEPLOY.md](./cloudflare/DEPLOY.md).
+
+There is also a manual GitHub Actions workflow for remote deploys so fetch/build traffic does not have to come from a local IP.
 
 ## License
 

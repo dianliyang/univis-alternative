@@ -24,6 +24,18 @@ This produces:
 - static assets in `site/.vitepress/dist`
 - published JSON data in `site/docs/public/data`
 
+`npm run cf:build` only rebuilds from existing local crawl data, but it refreshes bilingual tree artifacts first.
+
+If you need fresh remote crawl data first, run:
+
+```bash
+npm run fetch:data
+```
+
+`npm run build:data` runs `npm run prepare:trees` before parsing, normalization, and generation.
+
+Run `npm run fetch:data` before `npm run build:data` when you need fresh remote crawl data.
+
 ## Publish Data To R2
 
 Default bucket/prefix:
@@ -58,10 +70,36 @@ npm run cf:deploy
 ## End-to-End
 
 ```bash
+npm run fetch:data
 npm run cf:build
 npm run cf:publish-data
 npm run cf:deploy
 ```
+
+## Remote Manual Deploy
+
+The repo also includes a manual GitHub Actions workflow at `.github/workflows/deploy-cloudflare.yml`.
+
+Required GitHub repository secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+The workflow runs these commands remotely:
+
+```bash
+npm run fetch:data
+npm run cf:build
+npm run cf:publish-data
+npm run cf:deploy
+```
+
+To use it:
+
+1. Add the required GitHub repository secrets.
+2. Open the repository Actions tab.
+3. Select `Deploy Cloudflare`.
+4. Click `Run workflow`.
 
 ## Scheduled Sync
 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
+import { useData } from "vitepress";
 import lecturesBrowser from "../../data/build/lectures-browser.json";
 import { getBrowserState, type BrowserLecture, type BrowserNode } from "./browser-tree.js";
 
@@ -15,9 +16,10 @@ interface LecturesBrowserData {
   roots: LecturesBrowserDataNode[];
 }
 
+const { lang } = useData();
 const browser = ref<BrowserNode[]>(toBrowserNodes((lecturesBrowser as LecturesBrowserData).roots));
 const selectedPath = ref<string>("");
-const isGerman = computed(() => window.location.pathname.startsWith("/de/"));
+const isGerman = computed(() => lang.value === "de");
 
 onMounted(() => {
   const params = new URLSearchParams(window.location.search);
@@ -64,6 +66,10 @@ function select(path: string): void {
 }
 
 function syncUrl(path: string): void {
+  if (typeof window === "undefined") {
+    return;
+  }
+
   const baseRoute = window.location.pathname.startsWith("/de/") ? "/de/lectures/" : "/lectures/";
   const params = new URLSearchParams();
   if (path) {

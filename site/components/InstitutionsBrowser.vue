@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
+import { useData } from "vitepress";
 import institutionOrganizations from "../../data/build/institutions-organizations.json";
 import { findPathByRoute, getBrowserState, type BrowserLecture, type BrowserNode } from "./browser-tree.js";
 
+const { lang } = useData();
 const browser = ref<BrowserNode[]>(institutionOrganizations as BrowserNode[]);
 const selectedPath = ref<string>("");
-const isGerman = computed(() => window.location.pathname.startsWith("/de/"));
+const isGerman = computed(() => lang.value === "de");
 
 onMounted(() => {
   const requestedPath = resolveInitialPath(window.location.pathname, window.location.search, browser.value);
@@ -48,6 +50,10 @@ function resolveInitialPath(pathname: string, search: string, nodes: BrowserNode
 }
 
 function syncUrl(path: string): void {
+  if (typeof window === "undefined") {
+    return;
+  }
+
   const baseRoute = window.location.pathname.startsWith("/de/") ? "/de/institutions/" : "/institutions/";
   const params = new URLSearchParams();
   if (path) {

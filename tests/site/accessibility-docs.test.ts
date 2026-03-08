@@ -36,6 +36,7 @@ describe("docs and scripts", () => {
     expect(deployDoc).toContain("Run `npm run fetch:data` before `npm run build:data` when you need fresh remote crawl data.");
     expect(deployDoc).toContain("`CLOUDFLARE_API_TOKEN`");
     expect(deployDoc).toContain("`CLOUDFLARE_ACCOUNT_ID`");
+    expect(deployDoc).toContain("GitHub Actions cache");
   });
 
   it("defines a manual remote deploy workflow", async () => {
@@ -51,5 +52,9 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("npm run cf:deploy");
     expect(workflow).toContain("CLOUDFLARE_API_TOKEN");
     expect(workflow).toContain("CLOUDFLARE_ACCOUNT_ID");
+    expect(workflow).toContain("actions/cache");
+    expect(workflow).toContain("data/discovery");
+    expect(workflow).toContain("data/raw");
+    expect(workflow).toContain("data/normalized");
   });
 });

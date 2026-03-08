@@ -94,6 +94,14 @@ npm run cf:publish-data
 npm run cf:deploy
 ```
 
+The workflow also uses a GitHub Actions cache for:
+
+- `data/discovery`
+- `data/raw`
+- `data/normalized`
+
+That lets repeated manual runs reuse crawl snapshots and normalized tree artifacts instead of starting cold every time.
+
 To use it:
 
 1. Add the required GitHub repository secrets.

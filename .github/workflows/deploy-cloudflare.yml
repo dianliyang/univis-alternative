@@ -25,6 +25,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Restore UnivIS data cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/discovery
+            data/raw
+            data/normalized
+          key: univis-data-${{ runner.os }}-v1
+
       - name: Fetch fresh UnivIS data
         run: npm run fetch:data
 
@@ -36,3 +45,13 @@ jobs:
 
       - name: Deploy Worker
         run: npm run cf:deploy
+
+      - name: Save UnivIS data cache
+        if: success()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/discovery
+            data/raw
+            data/normalized
+          key: univis-data-${{ runner.os }}-v1

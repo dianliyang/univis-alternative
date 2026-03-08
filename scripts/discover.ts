@@ -9,8 +9,8 @@ const recentSemesters = process.env.UNIVIS_SEMESTER
 const seedUrls = [
   "https://univis.uni-kiel.de/",
   ...recentSemesters.flatMap((sem) => [
-    `https://univis.uni-kiel.de/form?__s=2&dsc=anew/main&anonymous=1&sem=${sem}&__e=519`,
-    `https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&anonymous=1&sem=${sem}&__e=519`
+    `https://univis.uni-kiel.de/form?__s=2&dsc=anew/main&anonymous=1&lang=en&sem=${sem}&__e=519`,
+    `https://univis.uni-kiel.de/form?__s=2&dsc=anew/tlecture&anonymous=1&lang=en&sem=${sem}&__e=519`
   ])
 ];
 

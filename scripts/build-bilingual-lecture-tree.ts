@@ -1,36 +1,35 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { parseDirectoryPage } from "../src/parsers/directory.js";
 import { parseLectureExportXml } from "../src/parsers/lecture-xml.js";
-import { parseOrganizationPage } from "../src/parsers/organization.js";
 import { extractNodeXmlExportUrl, parseXmlExportPage } from "../src/parsers/xml-export.js";
 import { createTaskQueue } from "../src/utils/task-queue.js";
 import { readResponseText } from "../src/utils/http-text.js";
 
 const rootDir = process.cwd();
 const semester = process.argv[2] ?? "2025w";
-const startDirArg = process.argv[3];
-const startDir = !startDirArg || startDirArg === "root" ? "" : startDirArg;
+const startPathArg = process.argv[3];
+const startPath = !startPathArg || startPathArg === "root" ? "" : startPathArg;
 const maxDepthArg = process.argv[4];
 const maxDepth = maxDepthArg ? Number.parseInt(maxDepthArg, 10) : Number.POSITIVE_INFINITY;
 const concurrencyArg = process.argv[5] ?? process.env.UNIVIS_TREE_CONCURRENCY;
 const concurrency = concurrencyArg ? Number.parseInt(concurrencyArg, 10) : 6;
-const fetchCache = new Map<string, Promise<MonoTreeNode>>();
+const fetchCache = new Map<string, Promise<MonoLectureTreeNode>>();
 const queue = createTaskQueue(concurrency);
 
-interface MonoTreeNode {
-  dir: string;
+interface MonoLectureTreeNode {
+  path: string;
   label: string;
   sourceUrl: string;
-  lectureListUrl?: string;
-  lectureCount?: number;
+  treeUrl: string;
   exportUrl?: string;
   exportForm?: Record<string, string>;
   lectures: MonoLectureMembershipLecture[];
-  children: MonoTreeNode[];
+  children: MonoLectureTreeNode[];
 }
 
-interface BilingualTreeNode {
-  dir: string;
+interface BilingualLectureTreeNode {
+  path: string;
   label: {
     en?: string;
     de?: string;
@@ -39,11 +38,10 @@ interface BilingualTreeNode {
     en?: string;
     de?: string;
   };
-  lectureListUrl?: {
+  treeUrl: {
     en?: string;
     de?: string;
   };
-  lectureCount?: number;
   exportUrl?: {
     en?: string;
     de?: string;
@@ -53,7 +51,7 @@ interface BilingualTreeNode {
     de?: Record<string, string>;
   };
   lectures: BilingualLectureMembershipLecture[];
-  children: BilingualTreeNode[];
+  children: BilingualLectureTreeNode[];
 }
 
 interface MonoLectureMembershipLecture {
@@ -76,7 +74,7 @@ interface BilingualLectureMembershipLecture {
   };
 }
 
-interface BilingualOrganizationMembershipNode {
+interface BilingualLectureMembershipNode {
   path: string;
   sourceUrl: {
     en?: string;
@@ -93,25 +91,25 @@ interface BilingualOrganizationMembershipNode {
   lectures: BilingualLectureMembershipLecture[];
 }
 
-interface OrganizationMembershipArtifact {
+interface LectureMembershipArtifact {
   semester: string;
-  kind: "lecture";
+  kind: "tlecture";
   generatedAt: string;
-  nodes: BilingualOrganizationMembershipNode[];
+  nodes: BilingualLectureMembershipNode[];
 }
 
 async function main(): Promise<void> {
-  const enTree = await buildTree(buildOrganizationUrl(semester, startDir, "en"), 1);
-  const deTree = await buildTree(buildOrganizationUrl(semester, startDir, "de"), 1);
+  const enTree = await buildTree(buildLectureUrl(semester, startPath, "en"));
+  const deTree = await buildTree(buildLectureUrl(semester, startPath, "de"));
   const merged = mergeTrees(enTree, deTree);
 
   await mkdir(join(rootDir, "data", "normalized"), { recursive: true });
-  const outputPath = join(rootDir, "data", "normalized", `organization-tree-bilingual-${semester}-${slug(startDir || "root")}.json`);
+  const outputPath = join(rootDir, "data", "normalized", `lecture-tree-bilingual-${semester}-${slug(startPath || "root")}.json`);
   const membershipOutputPath = join(
     rootDir,
     "data",
     "normalized",
-    `organization-tree-membership-bilingual-${semester}-${slug(startDir || "root")}.json`
+    `lecture-tree-membership-bilingual-${semester}-${slug(startPath || "root")}.json`
   );
   await writeFile(outputPath, JSON.stringify(stripTreeMembership(merged), null, 2));
   await writeFile(membershipOutputPath, JSON.stringify(buildMembershipArtifact(merged), null, 2));
@@ -121,30 +119,33 @@ async function main(): Promise<void> {
   console.log(`Saved to ${membershipOutputPath}`);
 }
 
-async function buildTree(url: string, depth: number): Promise<MonoTreeNode> {
-  const cacheKey = url;
-  const cached = fetchCache.get(cacheKey);
+async function buildTree(url: string, depth = 1): Promise<MonoLectureTreeNode> {
+  const cached = fetchCache.get(url);
   if (cached) {
     return cached;
   }
 
   const promise = buildTreeUncached(url, depth);
-  fetchCache.set(cacheKey, promise);
+  fetchCache.set(url, promise);
   return promise;
 }
 
-async function buildTreeUncached(url: string, depth: number): Promise<MonoTreeNode> {
+async function buildTreeUncached(url: string, depth: number): Promise<MonoLectureTreeNode> {
   const { html, parsed } = await queue.run(async () => {
     const html = await fetchText(url);
-    return { html, parsed: parseOrganizationPage(url, html) };
+    const result = parseDirectoryPage(url, html);
+    if (!result) {
+      throw new Error(`Failed to parse lecture directory page ${url}`);
+    }
+    return { html, parsed: result };
   });
   const exportMembership = await fetchLectureMembership(url, html);
-  const node: MonoTreeNode = {
-    dir: parsed.dir,
+
+  const node: MonoLectureTreeNode = {
+    path: parsed.path,
     label: parsed.label,
     sourceUrl: parsed.sourceUrl,
-    lectureListUrl: parsed.lectureListUrl,
-    lectureCount: parsed.lectureCount,
+    treeUrl: toTreeUrl(parsed.sourceUrl),
     exportUrl: exportMembership.exportUrl,
     exportForm: exportMembership.exportForm,
     lectures: exportMembership.lectures,
@@ -160,17 +161,18 @@ async function buildTreeUncached(url: string, depth: number): Promise<MonoTreeNo
   return node;
 }
 
-function mergeTrees(enNode: MonoTreeNode | undefined, deNode: MonoTreeNode | undefined): BilingualTreeNode {
-  const childPairs = new Map<string, { en?: MonoTreeNode; de?: MonoTreeNode }>();
+function mergeTrees(enNode: MonoLectureTreeNode | undefined, deNode: MonoLectureTreeNode | undefined): BilingualLectureTreeNode {
+  const childPairs = new Map<string, { en?: MonoLectureTreeNode; de?: MonoLectureTreeNode }>();
+
   for (const child of enNode?.children ?? []) {
-    childPairs.set(child.dir, { ...(childPairs.get(child.dir) ?? {}), en: child });
+    childPairs.set(child.path, { ...(childPairs.get(child.path) ?? {}), en: child });
   }
   for (const child of deNode?.children ?? []) {
-    childPairs.set(child.dir, { ...(childPairs.get(child.dir) ?? {}), de: child });
+    childPairs.set(child.path, { ...(childPairs.get(child.path) ?? {}), de: child });
   }
 
   return {
-    dir: enNode?.dir ?? deNode?.dir ?? "",
+    path: enNode?.path ?? deNode?.path ?? "",
     label: {
       en: enNode?.label,
       de: deNode?.label
@@ -179,14 +181,10 @@ function mergeTrees(enNode: MonoTreeNode | undefined, deNode: MonoTreeNode | und
       en: enNode?.sourceUrl,
       de: deNode?.sourceUrl
     },
-    lectureListUrl:
-      enNode?.lectureListUrl || deNode?.lectureListUrl
-        ? {
-            en: enNode?.lectureListUrl,
-            de: deNode?.lectureListUrl
-          }
-        : undefined,
-    lectureCount: enNode?.lectureCount ?? deNode?.lectureCount,
+    treeUrl: {
+      en: enNode?.treeUrl,
+      de: deNode?.treeUrl
+    },
     exportUrl:
       enNode?.exportUrl || deNode?.exportUrl
         ? {
@@ -208,30 +206,58 @@ function mergeTrees(enNode: MonoTreeNode | undefined, deNode: MonoTreeNode | und
   };
 }
 
-function stripTreeMembership(node: BilingualTreeNode): BilingualTreeNode {
+function stripTreeMembership(node: BilingualLectureTreeNode): BilingualLectureTreeNode {
   return {
-    dir: node.dir,
+    path: node.path,
     label: node.label,
     sourceUrl: node.sourceUrl,
-    lectureListUrl: node.lectureListUrl,
-    lectureCount: node.lectureCount,
+    treeUrl: node.treeUrl,
     lectures: [],
     children: node.children.map(stripTreeMembership)
   };
 }
 
-function buildMembershipArtifact(root: BilingualTreeNode): OrganizationMembershipArtifact {
+function buildMembershipArtifact(root: BilingualLectureTreeNode): LectureMembershipArtifact {
   return {
     semester,
-    kind: "lecture",
+    kind: "tlecture",
     generatedAt: new Date().toISOString(),
     nodes: flattenMembership(root)
   };
 }
 
-function flattenMembership(node: BilingualTreeNode): BilingualOrganizationMembershipNode[] {
-  const current: BilingualOrganizationMembershipNode = {
-    path: node.dir,
+function mergeLectureRefs(
+  enLectures: MonoLectureMembershipLecture[],
+  deLectures: MonoLectureMembershipLecture[]
+): BilingualLectureMembershipLecture[] {
+  const lecturePairs = new Map<string, { en?: MonoLectureMembershipLecture; de?: MonoLectureMembershipLecture }>();
+
+  for (const lecture of enLectures) {
+    lecturePairs.set(lecture.key, { ...(lecturePairs.get(lecture.key) ?? {}), en: lecture });
+  }
+  for (const lecture of deLectures) {
+    lecturePairs.set(lecture.key, { ...(lecturePairs.get(lecture.key) ?? {}), de: lecture });
+  }
+
+  return [...lecturePairs.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([, pair]) => ({
+      key: pair.en?.key ?? pair.de?.key ?? "",
+      id: pair.en?.id ?? pair.de?.id ?? "",
+      title: {
+        en: pair.en?.title,
+        de: pair.de?.title
+      },
+      sourceUrl: {
+        en: pair.en?.sourceUrl,
+        de: pair.de?.sourceUrl
+      }
+    }));
+}
+
+function flattenMembership(node: BilingualLectureTreeNode): BilingualLectureMembershipNode[] {
+  const current: BilingualLectureMembershipNode = {
+    path: node.path,
     sourceUrl: node.sourceUrl,
     exportUrl: node.exportUrl,
     exportForm: node.exportForm,
@@ -241,16 +267,27 @@ function flattenMembership(node: BilingualTreeNode): BilingualOrganizationMember
   return [current, ...node.children.flatMap(flattenMembership)];
 }
 
-function buildOrganizationUrl(semesterCode: string, dir: string, lang: "en" | "de"): string {
+function buildLectureUrl(semesterCode: string, path: string, lang: "en" | "de"): string {
   const url = new URL("https://univis.uni-kiel.de/form");
   url.searchParams.set("__s", "2");
-  url.searchParams.set("dsc", dir ? "anew/lecture" : "anew/lecture:");
-  url.searchParams.set("dir", dir);
+  url.searchParams.set("dsc", "anew/tlecture");
+  if (path) {
+    url.searchParams.set("tdir", path);
+  }
   url.searchParams.set("anonymous", "1");
   url.searchParams.set("lang", lang);
-  url.searchParams.set("ref", "lecture");
+  url.searchParams.set("ref", "tlecture");
   url.searchParams.set("sem", semesterCode);
   url.searchParams.set("__e", "519");
+  return url.toString();
+}
+
+function toTreeUrl(sourceUrl: string): string {
+  const url = new URL(sourceUrl);
+  url.searchParams.set("dsc", "anew/tlecture:tree");
+  if (!url.searchParams.get("ref")) {
+    url.searchParams.set("ref", "tlecture");
+  }
   return url.toString();
 }
 
@@ -310,39 +347,9 @@ async function fetchLectureMembership(
   };
 }
 
-function mergeLectureRefs(
-  enLectures: MonoLectureMembershipLecture[],
-  deLectures: MonoLectureMembershipLecture[]
-): BilingualLectureMembershipLecture[] {
-  const lecturePairs = new Map<string, { en?: MonoLectureMembershipLecture; de?: MonoLectureMembershipLecture }>();
-
-  for (const lecture of enLectures) {
-    lecturePairs.set(lecture.key, { ...(lecturePairs.get(lecture.key) ?? {}), en: lecture });
-  }
-  for (const lecture of deLectures) {
-    lecturePairs.set(lecture.key, { ...(lecturePairs.get(lecture.key) ?? {}), de: lecture });
-  }
-
-  return [...lecturePairs.entries()]
-    .sort(([left], [right]) => left.localeCompare(right))
-    .map(([, pair]) => ({
-      key: pair.en?.key ?? pair.de?.key ?? "",
-      id: pair.en?.id ?? pair.de?.id ?? "",
-      title: {
-        en: pair.en?.title,
-        de: pair.de?.title
-      },
-      sourceUrl: {
-        en: pair.en?.sourceUrl,
-        de: pair.de?.sourceUrl
-      }
-    }));
-}
-
-function renderTree(node: BilingualTreeNode, indent = ""): string {
+function renderTree(node: BilingualLectureTreeNode, indent = ""): string {
   const label = `${node.label.en ?? "?"} / ${node.label.de ?? "?"}`;
-  const lectureSuffix = node.lectureCount ? ` (${node.lectureCount} lectures)` : "";
-  const lines = [`${indent}- ${label} [${node.dir || "root"}]${lectureSuffix}`];
+  const lines = [`${indent}- ${label} [${node.path || "root"}]`];
   for (const child of node.children) {
     lines.push(renderTree(child, `${indent}  `));
   }

@@ -26,11 +26,15 @@ describe("build generator", () => {
     ]);
 
     const catalog = await readFile(join(rootDir, "data", "build", "catalog.json"), "utf8");
-    const facultySummary = await readFile(join(rootDir, "data", "build", "faculty-summary.json"), "utf8");
-    const facultyBrowser = await readFile(join(rootDir, "data", "build", "faculty-browser.json"), "utf8");
+    const institutionSummary = await readFile(join(rootDir, "data", "build", "institution-summary.json"), "utf8");
+    const lecturesBrowser = await readFile(join(rootDir, "data", "build", "lectures-browser.json"), "utf8");
+    const nodeMembership = await readFile(join(rootDir, "data", "build", "node-membership.json"), "utf8");
+    const publicCatalog = await readFile(join(rootDir, "site", "public", "data", "catalog.json"), "utf8");
     expect(manifest.courseCount).toBe(1);
     expect(catalog).toContain("English Literature");
-    expect(facultySummary).toContain("Medicine");
-    expect(facultyBrowser).toContain("Medicine");
+    expect(institutionSummary).toContain("Medicine");
+    expect(lecturesBrowser).toContain('"roots": []');
+    expect(nodeMembership).toContain('"lecture"');
+    expect(publicCatalog).toContain("English Literature");
   });
 });

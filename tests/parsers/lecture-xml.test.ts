@@ -29,4 +29,12 @@ describe("lecture XML parser", () => {
     expect(lectures[0]?.extraFields.ects_cred).toEqual(["6"]);
     expect(lectures[1]?.language).toBe("non_english_taught");
   });
+
+  it("builds lecture detail URLs in the language of the fetched XML export", async () => {
+    const xml = await readFile(join(process.cwd(), "tests", "fixtures", "xml", "lecture-export.xml"), "utf8");
+    const lectures = parseLectureExportXml(xml, { detailLang: "de" });
+
+    expect(lectures[0]?.sourceUrl).toContain("lang=de");
+    expect(lectures[0]?.sourceUrl).toContain("dsc=anew%2Flecture_view");
+  });
 });

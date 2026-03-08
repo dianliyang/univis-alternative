@@ -42,4 +42,24 @@ describe("directory parser", () => {
     expect(directory?.children).toHaveLength(2);
     expect(directory?.children.map((child) => child.path)).toEqual(["mathe/mathem/1fachb", "mathe/mathem/lehramt"]);
   });
+
+  it("falls back from raw path codes when a tlecture label is just the internal key", () => {
+    const html = `
+      <html>
+        <body>
+          <h2>Vorlesungsverzeichnis</h2>
+          <ul>
+            <li><a href="form?dsc=anew/tlecture&amp;tdir=medizi&amp;sem=2025w">medizi</a></li>
+            <li><a href="form?dsc=anew/tlecture&amp;tdir=_frhre&amp;sem=2025w">Lehrangebot f�r H�rer/-innen aller Fakult�ten</a></li>
+          </ul>
+        </body>
+      </html>
+    `;
+
+    const directory = parseDirectoryPage("https://univis.uni-kiel.de/form?dsc=anew/tlecture&sem=2025w", html);
+
+    expect(directory?.label).toBe("Vorlesungsverzeichnis");
+    expect(directory?.children[0]?.label).toBe("Faculty of Medicine");
+    expect(directory?.children[1]?.label).toBe("Lehrangebot f�r H�rer/-innen aller Fakult�ten");
+  });
 });

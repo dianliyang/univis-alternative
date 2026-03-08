@@ -48,8 +48,14 @@ const HANDLED_LEAF_TAGS = new Set([
   "exclude"
 ]);
 
-export function parseLectureExportXml(xml: string): XmlLectureRecord[] {
+export function parseLectureExportXml(
+  xml: string,
+  options: {
+    detailLang?: "en" | "de";
+  } = {}
+): XmlLectureRecord[] {
   const semester = matchAttribute(xml, "UnivIS", "semester");
+  const detailLang = options.detailLang ?? "en";
   const lectures = [...xml.matchAll(/<Lecture\b([^>]*)>([\s\S]*?)<\/Lecture>/g)];
 
   return lectures.map(([, attrs = "", block = ""]) => {
@@ -69,7 +75,8 @@ export function parseLectureExportXml(xml: string): XmlLectureRecord[] {
     const sourceUrl = buildLectureDetailUrl({
       lecturePath,
       semester: semester || undefined,
-      classificationPath
+      classificationPath,
+      lang: detailLang
     });
 
     return {
@@ -99,13 +106,14 @@ export function buildLectureDetailUrl(input: {
   lecturePath: string;
   semester?: string;
   classificationPath?: string;
+  lang?: "en" | "de";
 }): string {
   const url = new URL("https://univis.uni-kiel.de/form");
   url.searchParams.set("__s", "2");
   url.searchParams.set("dsc", "anew/lecture_view");
   url.searchParams.set("lvs", input.lecturePath);
   url.searchParams.set("anonymous", "1");
-  url.searchParams.set("lang", "en");
+  url.searchParams.set("lang", input.lang ?? "en");
   if (input.semester) {
     url.searchParams.set("sem", input.semester);
   }

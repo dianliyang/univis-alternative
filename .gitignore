@@ -10,6 +10,7 @@ site/.vitepress/dist/
 coverage/
 *.log
 
+docs/plans/
 data/raw/
 data/build/
 data/discovery/

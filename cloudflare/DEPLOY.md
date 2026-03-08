@@ -79,6 +79,7 @@ npm run cf:deploy
 ## Remote Manual Deploy
 
 The repo also includes a manual GitHub Actions workflow at `.github/workflows/deploy-cloudflare.yml`.
+There is also a separate manual tree refresh workflow at `.github/workflows/refresh-trees.yml`.
 
 Required GitHub repository secrets:
 
@@ -102,11 +103,14 @@ The workflow also uses a GitHub Actions cache for:
 
 That lets repeated manual runs reuse crawl snapshots and normalized tree artifacts instead of starting cold every time.
 
+Use `refresh-trees.yml` when you explicitly want to rebuild bilingual lecture and organization tree artifacts.
+Use `deploy-cloudflare.yml` for the normal remote deploy path.
+
 To use it:
 
 1. Add the required GitHub repository secrets.
 2. Open the repository Actions tab.
-3. Select `Deploy Cloudflare`.
+3. Select either `Refresh Trees` or `Deploy Cloudflare`.
 4. Click `Run workflow`.
 
 ## Scheduled Sync

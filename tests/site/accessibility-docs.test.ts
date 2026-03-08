@@ -37,6 +37,7 @@ describe("docs and scripts", () => {
     expect(deployDoc).toContain("`CLOUDFLARE_API_TOKEN`");
     expect(deployDoc).toContain("`CLOUDFLARE_ACCOUNT_ID`");
     expect(deployDoc).toContain("GitHub Actions cache");
+    expect(deployDoc).toContain("refresh-trees.yml");
   });
 
   it("defines a manual remote deploy workflow", async () => {
@@ -56,5 +57,18 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("data/discovery");
     expect(workflow).toContain("data/raw");
     expect(workflow).toContain("data/normalized");
+  });
+
+  it("defines a separate manual tree refresh workflow", async () => {
+    const workflow = await readFile(
+      join(process.cwd(), ".github", "workflows", "refresh-trees.yml"),
+      "utf8"
+    );
+
+    expect(workflow).toContain("workflow_dispatch:");
+    expect(workflow).toContain("npm run prepare:trees");
+    expect(workflow).toContain("actions/cache");
+    expect(workflow).toContain("data/normalized");
+    expect(workflow).not.toContain("npm run cf:deploy");
   });
 });

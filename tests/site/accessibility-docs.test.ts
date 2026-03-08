@@ -38,6 +38,8 @@ describe("docs and scripts", () => {
     expect(deployDoc).toContain("`CLOUDFLARE_ACCOUNT_ID`");
     expect(deployDoc).toContain("GitHub Actions cache");
     expect(deployDoc).toContain("refresh-trees.yml");
+    expect(deployDoc).toContain("fresh_crawl");
+    expect(deployDoc).toContain("force_tree_refresh");
   });
 
   it("defines a manual remote deploy workflow", async () => {
@@ -57,6 +59,10 @@ describe("docs and scripts", () => {
     expect(workflow).toContain("data/discovery");
     expect(workflow).toContain("data/raw");
     expect(workflow).toContain("data/normalized");
+    expect(workflow).toContain("fresh_crawl:");
+    expect(workflow).toContain("force_tree_refresh:");
+    expect(workflow).toContain("if: ${{ inputs.fresh_crawl == 'true' }}");
+    expect(workflow).toContain("UNIVIS_FORCE_TREE_REFRESH: ${{ inputs.force_tree_refresh == 'true' && '1' || '0' }}");
   });
 
   it("defines a separate manual tree refresh workflow", async () => {

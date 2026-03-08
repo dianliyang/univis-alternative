@@ -2,6 +2,15 @@ name: Deploy Cloudflare
 
 on:
   workflow_dispatch:
+    inputs:
+      fresh_crawl:
+        description: Run a fresh UnivIS crawl before building
+        required: false
+        default: "false"
+      force_tree_refresh:
+        description: Force a full tree refresh during build
+        required: false
+        default: "false"
 
 jobs:
   deploy:
@@ -11,6 +20,7 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       UNIVIS_TREE_CONCURRENCY: "1"
+      UNIVIS_FORCE_TREE_REFRESH: ${{ inputs.force_tree_refresh == 'true' && '1' || '0' }}
 
     steps:
       - name: Check out repository
@@ -35,6 +45,7 @@ jobs:
           key: univis-data-${{ runner.os }}-v1
 
       - name: Fetch fresh UnivIS data
+        if: ${{ inputs.fresh_crawl == 'true' }}
         run: npm run fetch:data
 
       - name: Build Cloudflare artifacts

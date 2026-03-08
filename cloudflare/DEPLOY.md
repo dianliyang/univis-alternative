@@ -106,6 +106,18 @@ That lets repeated manual runs reuse crawl snapshots and normalized tree artifac
 Use `refresh-trees.yml` when you explicitly want to rebuild bilingual lecture and organization tree artifacts.
 Use `deploy-cloudflare.yml` for the normal remote deploy path.
 
+`deploy-cloudflare.yml` also has manual inputs:
+
+- `fresh_crawl`
+- `force_tree_refresh`
+
+Defaults are incremental:
+
+- `fresh_crawl: false`
+- `force_tree_refresh: false`
+
+That means the default remote deploy reuses cached/local artifacts when possible and only does the expensive remote work when you explicitly request it.
+
 To use it:
 
 1. Add the required GitHub repository secrets.

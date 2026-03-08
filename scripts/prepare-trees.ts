@@ -1,9 +1,15 @@
 import { execFileSync } from "node:child_process";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { compareSemesterCodes, getRecentSemesterCodes } from "../src/utils/semester.js";
 
 const rootDir = process.cwd();
+const REQUIRED_ROOT_ARTIFACT_PREFIXES = [
+  "lecture-tree-bilingual",
+  "lecture-tree-membership-bilingual",
+  "organization-tree-bilingual",
+  "organization-tree-membership-bilingual"
+] as const;
 
 export async function resolveLatestBuildSemester(projectRoot: string): Promise<string> {
   if (process.env.UNIVIS_SEMESTER) {
@@ -26,8 +32,29 @@ export function extractSemesterCode(urlText: string): string | null {
   }
 }
 
+export async function shouldRefreshTrees(projectRoot: string, semester: string): Promise<boolean> {
+  if (process.env.UNIVIS_FORCE_TREE_REFRESH === "1") {
+    return true;
+  }
+
+  for (const prefix of REQUIRED_ROOT_ARTIFACT_PREFIXES) {
+    const artifactPath = `${projectRoot}/data/normalized/${prefix}-${semester}-root.json`;
+    try {
+      await access(artifactPath);
+    } catch {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 async function main(): Promise<void> {
   const semester = await resolveLatestBuildSemester(rootDir);
+  if (!(await shouldRefreshTrees(rootDir, semester))) {
+    console.log(`Using existing tree artifacts for ${semester}.`);
+    return;
+  }
 
   execFileSync("npx", ["tsx", "scripts/build-bilingual-lecture-tree.ts", semester], {
     stdio: "inherit"

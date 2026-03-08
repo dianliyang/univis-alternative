@@ -10,6 +10,7 @@ import {
   loadLatestOrganizationTreeMembership
 } from "../../scripts/generate.js";
 import { resolveLatestBuildSemester } from "../../scripts/prepare-trees.js";
+import { shouldRefreshTrees } from "../../scripts/prepare-trees.js";
 
 describe("generate script organization tree loading", () => {
   it("enriches the root tree with faculty-specific bilingual trees", async () => {
@@ -303,5 +304,39 @@ describe("generate script organization tree loading", () => {
     );
 
     await expect(assertValidBuildInputs(rootDir)).rejects.toThrow("Tree artifacts span multiple semesters");
+  });
+
+  it("skips tree refresh when the semester root artifacts already exist", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-prepare-trees-"));
+    const normalizedDir = join(rootDir, "data", "normalized");
+    await mkdir(normalizedDir, { recursive: true });
+
+    await writeFile(join(normalizedDir, "lecture-tree-bilingual-2026s-root.json"), JSON.stringify({ path: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "lecture-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "tlecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+    await writeFile(join(normalizedDir, "organization-tree-bilingual-2026s-root.json"), JSON.stringify({ dir: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "organization-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "lecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+
+    await expect(shouldRefreshTrees(rootDir, "2026s")).resolves.toBe(false);
+  });
+
+  it("refreshes trees when a required semester root artifact is missing", async () => {
+    const rootDir = await mkdtemp(join(tmpdir(), "univis-prepare-trees-"));
+    const normalizedDir = join(rootDir, "data", "normalized");
+    await mkdir(normalizedDir, { recursive: true });
+
+    await writeFile(join(normalizedDir, "lecture-tree-bilingual-2026s-root.json"), JSON.stringify({ path: "", children: [] }));
+    await writeFile(
+      join(normalizedDir, "lecture-tree-membership-bilingual-2026s-root.json"),
+      JSON.stringify({ semester: "2026s", kind: "tlecture", generatedAt: "2026-03-08T00:00:00.000Z", nodes: [] })
+    );
+    await writeFile(join(normalizedDir, "organization-tree-bilingual-2026s-root.json"), JSON.stringify({ dir: "", children: [] }));
+
+    await expect(shouldRefreshTrees(rootDir, "2026s")).resolves.toBe(true);
   });
 });

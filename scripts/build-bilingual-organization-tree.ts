@@ -6,6 +6,7 @@ import { extractNodeXmlExportUrl, parseXmlExportPage } from "../src/parsers/xml-
 import { createTaskQueue } from "../src/utils/task-queue.js";
 import { readResponseText } from "../src/utils/http-text.js";
 import { retryAsync } from "../src/utils/retry.js";
+import { shouldFetchTerminalMembership } from "../src/utils/tree-refresh.js";
 
 const rootDir = process.cwd();
 const semester = process.argv[2] ?? "2025w";
@@ -139,7 +140,8 @@ async function buildTreeUncached(url: string, depth: number): Promise<MonoTreeNo
     const html = await fetchText(url);
     return { html, parsed: parseOrganizationPage(url, html) };
   });
-  const exportMembership = await fetchLectureMembership(url, html);
+  const fetchMembership = shouldFetchTerminalMembership(parsed.children.length, depth, maxDepth);
+  const exportMembership = fetchMembership ? await fetchLectureMembership(url, html) : { lectures: [] };
   const node: MonoTreeNode = {
     dir: parsed.dir,
     label: parsed.label,

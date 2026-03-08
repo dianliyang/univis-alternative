@@ -11,6 +11,14 @@ const REQUIRED_ROOT_ARTIFACT_PREFIXES = [
   "organization-tree-membership-bilingual"
 ] as const;
 
+interface RootLectureTree {
+  children?: Array<{ path: string }>;
+}
+
+interface RootOrganizationTree {
+  children?: Array<{ dir: string }>;
+}
+
 export async function resolveLatestBuildSemester(projectRoot: string): Promise<string> {
   if (process.env.UNIVIS_SEMESTER) {
     return process.env.UNIVIS_SEMESTER;
@@ -49,19 +57,100 @@ export async function shouldRefreshTrees(projectRoot: string, semester: string):
   return false;
 }
 
+export async function findMissingTreeBranches(
+  projectRoot: string,
+  semester: string
+): Promise<{ lecture: string[]; organization: string[] }> {
+  const normalizedDir = `${projectRoot}/data/normalized`;
+  const lectureRoot = JSON.parse(
+    await readFile(`${normalizedDir}/lecture-tree-bilingual-${semester}-root.json`, "utf8")
+  ) as RootLectureTree;
+  const organizationRoot = JSON.parse(
+    await readFile(`${normalizedDir}/organization-tree-bilingual-${semester}-root.json`, "utf8")
+  ) as RootOrganizationTree;
+
+  const lecture = await collectMissingBranches(
+    normalizedDir,
+    semester,
+    lectureRoot.children?.map((child) => child.path).filter(Boolean) ?? [],
+    "lecture-tree-bilingual",
+    "lecture-tree-membership-bilingual"
+  );
+  const organization = await collectMissingBranches(
+    normalizedDir,
+    semester,
+    organizationRoot.children?.map((child) => child.dir).filter(Boolean) ?? [],
+    "organization-tree-bilingual",
+    "organization-tree-membership-bilingual"
+  );
+
+  return { lecture, organization };
+}
+
 async function main(): Promise<void> {
   const semester = await resolveLatestBuildSemester(rootDir);
-  if (!(await shouldRefreshTrees(rootDir, semester))) {
+  if (await shouldRefreshTrees(rootDir, semester)) {
+    execFileSync("npx", ["tsx", "scripts/build-bilingual-lecture-tree.ts", semester], {
+      stdio: "inherit"
+    });
+    execFileSync("npx", ["tsx", "scripts/build-bilingual-organization-tree.ts", semester], {
+      stdio: "inherit"
+    });
+    return;
+  }
+
+  const missingBranches = await findMissingTreeBranches(rootDir, semester);
+  if (missingBranches.lecture.length === 0 && missingBranches.organization.length === 0) {
     console.log(`Using existing tree artifacts for ${semester}.`);
     return;
   }
 
-  execFileSync("npx", ["tsx", "scripts/build-bilingual-lecture-tree.ts", semester], {
-    stdio: "inherit"
-  });
-  execFileSync("npx", ["tsx", "scripts/build-bilingual-organization-tree.ts", semester], {
-    stdio: "inherit"
-  });
+  for (const path of missingBranches.lecture) {
+    execFileSync("npx", ["tsx", "scripts/build-bilingual-lecture-tree.ts", semester, path], {
+      stdio: "inherit"
+    });
+  }
+
+  for (const dir of missingBranches.organization) {
+    execFileSync("npx", ["tsx", "scripts/build-bilingual-organization-tree.ts", semester, dir], {
+      stdio: "inherit"
+    });
+  }
+}
+
+async function collectMissingBranches(
+  normalizedDir: string,
+  semester: string,
+  branches: string[],
+  treePrefix: string,
+  membershipPrefix: string
+): Promise<string[]> {
+  const missing: string[] = [];
+
+  for (const branch of branches) {
+    const slug = branchSlug(branch);
+    const treePath = `${normalizedDir}/${treePrefix}-${semester}-${slug}.json`;
+    const membershipPath = `${normalizedDir}/${membershipPrefix}-${semester}-${slug}.json`;
+    const exists = await Promise.all([artifactExists(treePath), artifactExists(membershipPath)]);
+    if (!exists.every(Boolean)) {
+      missing.push(branch);
+    }
+  }
+
+  return missing;
+}
+
+async function artifactExists(path: string): Promise<boolean> {
+  try {
+    await access(path);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function branchSlug(value: string): string {
+  return value.replace(/[^\w-]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {

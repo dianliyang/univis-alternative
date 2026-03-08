@@ -6,6 +6,7 @@ import { extractNodeXmlExportUrl, parseXmlExportPage } from "../src/parsers/xml-
 import { createTaskQueue } from "../src/utils/task-queue.js";
 import { readResponseText } from "../src/utils/http-text.js";
 import { retryAsync } from "../src/utils/retry.js";
+import { readTreeHttpCache, writeTreeHttpCache } from "../src/utils/tree-http-cache.js";
 import { shouldFetchTerminalMembership } from "../src/utils/tree-refresh.js";
 
 const rootDir = process.cwd();
@@ -258,16 +259,29 @@ function buildOrganizationUrl(semesterCode: string, dir: string, lang: "en" | "d
 }
 
 async function fetchText(url: string): Promise<string> {
+  const cached = await readTreeHttpCache(rootDir, { method: "GET", url });
+  if (cached !== null) {
+    return cached;
+  }
+
   const response = await fetchWithRetry(url, {
     signal: AbortSignal.timeout(20000)
   });
   if (!response.ok) {
     throw new Error(`Request failed with ${response.status} for ${url}`);
   }
-  return readResponseText(response);
+  const text = await readResponseText(response);
+  await writeTreeHttpCache(rootDir, { method: "GET", url }, text);
+  return text;
 }
 
 async function postForm(url: string, body: URLSearchParams): Promise<string> {
+  const bodyText = body.toString();
+  const cached = await readTreeHttpCache(rootDir, { method: "POST", url, body: bodyText });
+  if (cached !== null) {
+    return cached;
+  }
+
   const response = await fetchWithRetry(url, {
     method: "POST",
     headers: {
@@ -279,7 +293,9 @@ async function postForm(url: string, body: URLSearchParams): Promise<string> {
   if (!response.ok) {
     throw new Error(`Request failed with ${response.status} for ${url}`);
   }
-  return readResponseText(response);
+  const text = await readResponseText(response);
+  await writeTreeHttpCache(rootDir, { method: "POST", url, body: bodyText }, text);
+  return text;
 }
 
 async function fetchWithRetry(input: string, init: RequestInit): Promise<Response> {
